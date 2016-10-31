@@ -3,10 +3,112 @@
 <head>
     <title>Financial Selector</title>
     <link rel="stylesheet" href="../bower_components/rv-common-style/dist/css/rise.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    
+    <script type="text/javascript">
+    	(function(angular) {
+  		'use strict';
+			angular.module('ngAppDemo', []).controller('ngAppDemoController', function($scope) {
+			});
+		})(window.angular);
+    </script>
 </head>
 
-<body>
-	<h1>Hello World!</h1>
+<body ng-app="ngAppDemo"
+	ng-class="{ 
+		'financial-selector financial-selector--login': !emailLogin,
+		'financial-selector financial-selector--login is-email-login': emailLogin
+	}"
+>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+
+      <a class="navbar-brand" href="#">
+        <img src="https://s3.amazonaws.com/Rise-Images/Website/rise-logo.svg">
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div>
+      <ul class="nav navbar-nav hidden">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+        <li><button class="btn btn-primary navbar-btn">Need Help?</button></li>
+        <li><button class="btn btn-primary navbar-btn add-left hidden">Sign Up</button></li>
+        <li class="dropdown hidden">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">John Doe - johndoe@globex.com<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">User Settings</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+
+<div class="container">
+<div class="financial-selector__container" ng-class="{'email-login-animation' : emailLogin}">
+	<div class="hero" ng-class="{'leave' : emailLogin}">
+
+		<h1>Financial Selector</h1>	
+		<h3>Lorem Ipsum Dolor Sit Amet Consectetur Tempor Incididunt</h3>
+		<br>
+		<a class="add-top" href="#">What Is The Financial Selector?</a>
+
+		<div class="row add-top add-bottom">
+			<div class="col-sm-4 col-sm-offset-4">
+				<div class="login-options">
+					<button class="btn btn-google-auth btn-lg btn-block add-bottom">Login with Google <i class="fa fa-google icon-right"></i></button>
+					<button class="btn btn-default btn-lg btn-block" ng-click="emailLogin = true">Login with Email <i class="fa fa-envelope icon-right"></i></button>
+				</div>
+			</div>
+		</div><!--row-->
+
+	</div><!--hero-->
+
+
+<div>
+	<div class="row">
+		<div class="col-sm-6 col-sm-offset-3">
+
+			<div class="panel panel-default panel-email-login">
+				<div class="panel-body">		
+					<form class="add-bottom">
+          <fieldset>
+            <legend class="text-center">Login to Financial Selector</legend>
+            <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+            <div class="form-group">
+              <label for="exampleInputEmail">Your Email</label>
+              <input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            </div><!--col-->
+            </div><!--row-->
+            
+          </fieldset>
+        </form>
+
+        	<a class="text-center btn btn-link btn-block" href="#">Forgot Password?</a>
+					</div><!--panel-body-->
+				</div><!--panel-default-->
+			</div>
+		</div>
+	</div>
+</div><!--financial-selector__container-->
+</div><!--container-->
 </body>
 
 </html>
