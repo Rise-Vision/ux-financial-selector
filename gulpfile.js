@@ -23,8 +23,10 @@ gulp.task('browser-sync-reload', function() {
 gulp.task('copy', function () {
      gulp
       .src('app/index.html')
-      .pipe(gulp.dest('dist'));
+      .pipe(gulp.dest('dist/app'));
 });
+
+
 
 /**
  * Watch scss files for changes & recompile
