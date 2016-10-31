@@ -79,8 +79,24 @@
 		<div class="col-sm-6 col-sm-offset-3">
 
 			<div class="panel panel-default panel-email-login">
-				<div class="panel-body">		
-					<form class="add-bottom">
+				<div class="panel-body" >		
+					<form class="add-bottom" ng-if="forgotPass">
+						<legend class="text-center">Recover Your Password</legend>
+            <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+            <div class="form-group">
+              <label for="exampleInputEmail">Your Email</label>
+              <p class="text-muted">Enter the email you've used to when you registered. We'll email the recovery instructions to that address.</p>
+              <input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+            </div>
+            
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            </div><!--col-->
+            </div><!--row-->
+            
+          	</fieldset>
+					</form>
+					<form class="add-bottom" ng-hide="forgotPass">
           <fieldset>
             <legend class="text-center">Login to Financial Selector</legend>
             <div class="row">
@@ -100,7 +116,8 @@
           </fieldset>
         </form>
 
-        	<a class="text-center btn btn-link btn-block" href="#">Forgot Password?</a>
+        	<a class="text-center btn btn-link btn-block" ng-hide="forgotPass" ng-click="forgotPass = true" href="#">Forgot Password?</a>
+        	<a href="#" class="text-center btn btn-link btn-block" ng-if="forgotPass">Cancel</a>
 					</div><!--panel-body-->
 				</div><!--panel-default-->
 			</div>
