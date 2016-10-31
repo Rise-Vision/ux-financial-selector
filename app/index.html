@@ -17,18 +17,14 @@
 	}"
 >
 
-<nav class="navbar navbar-default">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+	<nav class="navbar navbar-default">
+  	<div class="container">
+    	<div class="navbar-header">
+      	<a class="navbar-brand" href="#">
+        	<img src="https://s3.amazonaws.com/Rise-Images/Website/rise-logo.svg">
+      	</a>
+    	</div>
 
-      <a class="navbar-brand" href="#">
-        <img src="https://s3.amazonaws.com/Rise-Images/Website/rise-logo.svg">
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div>
       <ul class="nav navbar-nav hidden">
         <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
       </ul>
@@ -41,86 +37,80 @@
             <li><a href="#">User Settings</a></li>
             <li><a href="#">Log Out</a></li>
           </ul>
-        </li>
+       	</li>
       </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+  	</div><!-- /.container-fluid -->
+	</nav>
 
+	<div class="container">
+		<div class="financial-selector__container" ng-class="{'email-login-animation' : emailLogin}">
+			<div class="hero" ng-class="{'leave' : emailLogin}">
+				<h1>Financial Selector</h1>	
+				<h3>Lorem Ipsum Dolor Sit Amet Consectetur Tempor Incididunt</h3>
+				<br>
+				<a class="add-top" href="#">What Is The Financial Selector?</a>
 
+				<div class="row add-top add-bottom">
+					<div class="col-sm-4 col-sm-offset-4">
+						<div class="login-options">
+							<button class="btn btn-primary btn-lg btn-block add-bottom" ng-click="emailLogin = true">Login with Email</button>
+							<button class="btn btn-google-auth btn-lg btn-block add-bottom"><i style="margin-top:4px; margin-right: -12px;" class="fa fa-google fa-lg pull-left"></i> Login with Google </button>
+							
+						</div>
+					</div><!--col-->
+				</div><!--row-->
+			</div><!--hero-->
+		<div>
+		
+					<div class="row">
+						<div class="col-sm-6 col-sm-offset-3">
+							<div class="panel panel-default panel-email-login">
+								<div class="panel-body">
 
-<div class="container">
-<div class="financial-selector__container" ng-class="{'email-login-animation' : emailLogin}">
-	<div class="hero" ng-class="{'leave' : emailLogin}">
+								<form class="add-bottom" ng-if="forgotPass">
+									<fieldset>
+										<legend class="text-center">Recover Your Password</legend>
+        		    		<div class="row">
+            					<div class="col-sm-8 col-sm-offset-2">
+            						<div class="form-group">
+              						<label for="exampleInputEmail">Your Email</label>
+              						<p class="text-muted">Enter the email you've used to when you registered. We'll email the recovery instructions to that address.</p>
+              						<input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+            						</div>
+            					<button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            				</div><!--col-->
+            			</div><!--row-->
+	          			</fieldset>
+								</form>
 
-		<h1>Financial Selector</h1>	
-		<h3>Lorem Ipsum Dolor Sit Amet Consectetur Tempor Incididunt</h3>
-		<br>
-		<a class="add-top" href="#">What Is The Financial Selector?</a>
+								<form class="add-bottom" ng-hide="forgotPass">
+      		    		<fieldset>
+          	  			<legend class="text-center">Login to Financial Selector</legend>
+            				<div class="row">
+            					<div class="col-sm-6 col-sm-offset-3">
+            						<div class="form-group">
+              						<label for="exampleInputEmail">Your Email</label>
+              						<input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter email">
+            						</div>
+            						<div class="form-group">
+              						<label for="exampleInputPassword">Password</label>
+              						<input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
+            						</div>
+            						<a type="submit" href="main.html" class="btn btn-primary btn-lg btn-block">Submit</a>
+            					</div><!--col-->
+            				</div><!--row-->
+	          			</fieldset>
+  	      			</form>
 
-		<div class="row add-top add-bottom">
-			<div class="col-sm-4 col-sm-offset-4">
-				<div class="login-options">
-					<button class="btn btn-google-auth btn-lg btn-block add-bottom">Login with Google <i class="fa fa-google icon-right"></i></button>
-					<button class="btn btn-default btn-lg btn-block" ng-click="emailLogin = true">Login with Email <i class="fa fa-envelope icon-right"></i></button>
+        				<a class="text-center btn btn-link btn-block" ng-hide="forgotPass" ng-click="forgotPass = true" href="#">Forgot Password?</a>
+        				<a href="#" class="text-center btn btn-link btn-block" ng-if="forgotPass">Cancel</a>
+							</div><!--panel-body-->
+						</div><!--panel-default-->
+					</div>
 				</div>
 			</div>
-		</div><!--row-->
-
-	</div><!--hero-->
-
-
-<div>
-	<div class="row">
-		<div class="col-sm-6 col-sm-offset-3">
-
-			<div class="panel panel-default panel-email-login">
-				<div class="panel-body" >		
-					<form class="add-bottom" ng-if="forgotPass">
-						<legend class="text-center">Recover Your Password</legend>
-            <div class="row">
-            <div class="col-sm-8 col-sm-offset-2">
-            <div class="form-group">
-              <label for="exampleInputEmail">Your Email</label>
-              <p class="text-muted">Enter the email you've used to when you registered. We'll email the recovery instructions to that address.</p>
-              <input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter email">
-            </div>
-            
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-            </div><!--col-->
-            </div><!--row-->
-            
-          	</fieldset>
-					</form>
-					<form class="add-bottom" ng-hide="forgotPass">
-          <fieldset>
-            <legend class="text-center">Login to Financial Selector</legend>
-            <div class="row">
-            <div class="col-sm-6 col-sm-offset-3">
-            <div class="form-group">
-              <label for="exampleInputEmail">Your Email</label>
-              <input type="text" class="form-control" id="exampleInputEmail" placeholder="Enter email">
-            </div>
-            <div class="form-group">
-              <label for="exampleInputPassword">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword" placeholder="Password">
-            </div>
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-            </div><!--col-->
-            </div><!--row-->
-            
-          </fieldset>
-        </form>
-
-        	<a class="text-center btn btn-link btn-block" ng-hide="forgotPass" ng-click="forgotPass = true" href="#">Forgot Password?</a>
-        	<a href="#" class="text-center btn btn-link btn-block" ng-if="forgotPass">Cancel</a>
-					</div><!--panel-body-->
-				</div><!--panel-default-->
-			</div>
-		</div>
-	</div>
-</div><!--financial-selector__container-->
-</div><!--container-->
+		</div><!--financial-selector__container-->
+	</div><!--container-->
 </body>
 
 </html>

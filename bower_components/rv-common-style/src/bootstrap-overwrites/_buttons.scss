@@ -31,7 +31,7 @@ $google-red: #df4a32;
 }
 
 .btn-google-auth {
-  @include button-variant($white, $google-red, $google-red, $btn-default-border-disabled, darken($google-red, 10%), lighten($google-red, 5%));
+  @include button-variant($google-red, $white, $btn-default-bg, $btn-default-border-disabled, darken($google-red, 10%), lighten($google-red, 5%));
 }
 
 .btn-white {

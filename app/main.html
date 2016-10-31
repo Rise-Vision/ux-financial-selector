@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Selector</title>
+    <link rel="stylesheet" href="../bower_components/rv-common-style/dist/css/rise.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    
+    <script type="text/javascript">
+    	
+    </script>
+</head>
+
+<body ng-app=""
+	ng-class="{ 
+		'financial-selector financial-selector--login': !emailLogin,
+		'financial-selector financial-selector--login is-email-login': emailLogin
+	}"
+>
+
+	<nav class="navbar navbar-default">
+  	<div class="container">
+    	<div class="navbar-header">
+      	<a class="navbar-brand" href="#">
+        	<img src="https://s3.amazonaws.com/Rise-Images/Website/rise-logo.svg">
+      	</a>
+    	</div>
+
+      <ul class="nav navbar-nav hidden">
+        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right hidden-xs">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><strong>John Doe</strong> <span class="text-muted icon-right">johndoe@globex.com</span> <span class="caret icon-right"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">User Settings</a></li>
+            <li><a href="#">Log Out</a></li>
+          </ul>
+       	</li>
+      </ul>
+  	</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+    <div class="row">
+      <div class="col-sm-10">
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-home icon-left"></i> Displays</a></li>
+        </ol>
+      </div><!--col-->
+      <div class="col-sm-2">
+        <a href="#" class="btn btn-primary btn-lg btn-block">Add Display</a>
+      </div>
+    </div><!--row-->
+    
+    
+    <form>
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Search by Name, ID or Company" name="">
+      </div>
+    </form>
+    <div class="panel panel-default">
+      <table class="table">
+        <thead class="table-header">
+          <tr class="table-header__row">
+            <th class="table-header__cell">Name</th>
+            <th class="table-header__cell">ID</th>
+            <th class="table-header__cell">Company</th>
+            <th class="table-header__cell"></th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+
+          <tr class="table-body__row">
+            <td class="table-body__cell">
+              <a href="#"><strong>Display 1</strong></a>
+            </td>
+            <td>123</td>
+            <td>Company</td>
+            <td class="text-right"><button class="btn btn-xs btn-primary">Manage Users</button></td>
+          </tr>
+
+          <tr class="table-body__row">
+            <td class="table-body__cell">
+              <a href="#"><strong>Display 1</strong></a>
+            </td>
+            <td>123</td>
+            <td>Company</td>
+            <td class="text-right"><button class="btn btn-xs btn-primary">Manage Users</button></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+	</div><!--container-->
+</body>
+
+</html>
