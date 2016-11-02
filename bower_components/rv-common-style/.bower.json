@@ -21,11 +21,11 @@
     "rv-common-style": "git://github.com/Rise-Vision/common-style"
   },
   "homepage": "https://github.com/Rise-Vision/common-style",
-  "_release": "6694defcdf",
+  "_release": "61d07ea6e4",
   "_resolution": {
     "type": "branch",
     "branch": "feature/financial-selector",
-    "commit": "6694defcdfe4d3e1322f8b73b7b70c7d2188de5b"
+    "commit": "61d07ea6e4e6a8b547c9be92eb645b88ef067709"
   },
   "_source": "https://github.com/Rise-Vision/common-style.git",
   "_target": "feature/financial-selector",

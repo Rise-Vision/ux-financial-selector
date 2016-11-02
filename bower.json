@@ -1,18 +1,13 @@
 {
-  "name": "ux-financial-selector",
-  "description": "prototype for financial selector",
-  "main": "index.html",
+  "name": "ux-project",
   "authors": [
     "Ghislaine Guerin <ghislaine.guerin@risevision.com>"
   ],
-  "license": "MIT",
-  "keywords": [
-    "gulp",
-    "browsersync"
-  ],
-  "homepage": "https://github.com/Rise-Vision/ux-financial-selector",
+  "description": "",
+  "main": "",
   "moduleType": [],
-  "private": true,
+  "license": "MIT",
+  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -21,6 +16,7 @@
     "tests"
   ],
   "dependencies": {
+    "angular": "~1.5.8",
     "rv-common-style": "https://github.com/Rise-Vision/common-style.git#feature/financial-selector"
   },
   "resolutions": {

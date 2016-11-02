@@ -1,6 +1,5 @@
 .financial-selector {
-	overflow: hidden;
-	height: calc(100vh-50px);
+	
 	h1 {
 		font-size: 48px;
 		margin-bottom: 0;
@@ -17,6 +16,10 @@
 		-webkit-transition: all 0.2s;
    	transition: all 0.2s;
    	height: 400px;
+	}
+	&.financial-selector--login {
+		overflow: hidden;
+		height: calc(100vh-50px);
 	}
 }
 

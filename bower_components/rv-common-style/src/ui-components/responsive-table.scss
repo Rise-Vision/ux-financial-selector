@@ -16,6 +16,7 @@
   .table-body {
     .table-body__row > .table-body__cell {
       vertical-align: middle;
+      border-right: 1px solid #f5f5f5;
       >a {
         display: block;
       }

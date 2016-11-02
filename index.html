@@ -1,15 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Financial Selector</title>
-    <link rel="stylesheet" href="../bower_components/rv-common-style/dist/css/rise.min.css">
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    
-    <script type="text/javascript">
-    	
-    </script>
+	<title>Financial Selector</title>
+	
+	<link rel="stylesheet" type="text/css" href="css/rise.min.css">
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 </head>
-
 <body ng-app=""
 	ng-class="{ 
 		'financial-selector financial-selector--login': !emailLogin,
@@ -54,7 +50,7 @@
 					<div class="col-sm-4 col-sm-offset-4">
 						<div class="login-options">
 							<button class="btn btn-primary btn-lg btn-block add-bottom" ng-click="emailLogin = true">Login with Email</button>
-							<button class="btn btn-google-auth btn-lg btn-block add-bottom"><i style="margin-top:4px; margin-right: -12px;" class="fa fa-google fa-lg pull-left"></i> Login with Google </button>
+							<button class="btn btn-google-auth btn-lg btn-block add-bottom"><img class="pull-left" width="20px" src="https://s3.amazonaws.com/Rise-Images/financial-selector/google-icon.png"> <span style="margin-left: -20px">Login with Google</span> </button>
 							
 						</div>
 					</div><!--col-->
@@ -112,5 +108,4 @@
 		</div><!--financial-selector__container-->
 	</div><!--container-->
 </body>
-
 </html>
