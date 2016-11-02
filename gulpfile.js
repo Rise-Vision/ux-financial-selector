@@ -1,18 +1,23 @@
+// //////////////
+// Required
+// //////////////
 var gulp = require('gulp');
 var browserSync = require('browser-sync');
-var sass = require('gulp-sass');
-var prefix = require('gulp-autoprefixer');
+var modRewrite  = require('connect-modrewrite');
+var	uglify = require("gulp-uglify");
+var	rename = require('gulp-rename');
 
-/**
- * Server
- */
+// //////////////
+// Browser-Sync
+// //////////////
+
 gulp.task('browser-sync', function() {
-    browserSync({
-        startPath: 'app/index.html',
-        server: {
-            baseDir: './'
-        }
-    });
+  browserSync({
+    startPath: 'index.html',
+    server: {
+      baseDir: './'
+    }
+  });
 });
 
 gulp.task('browser-sync-reload', function() {
@@ -20,22 +25,24 @@ gulp.task('browser-sync-reload', function() {
   browserSync.reload();
 });
 
-gulp.task('copy', function () {
-     gulp
-      .src('app/index.html')
-      .pipe(gulp.dest('dist'));
+// //////////////
+// Scripts Task
+// //////////////
+
+gulp.task('scripts', function(){
+	gulp.src('bower_components/rv-common-style/dist/css/*.css')
+	.pipe(gulp.dest('css'));
 });
 
-/**
- * Watch scss files for changes & recompile
- * Watch html/md files
- */
-gulp.task('watch', function() {
-    gulp.watch('scss/*.scss', ['browser-sync-reload']);
-    gulp.watch(['*.html']);
+// //////////////
+// Watch Task
+// //////////////
+
+gulp.task('watch', function(){
+	gulp.watch('bower_components/rv-common-style/dist/css/*.css', ['scripts','browser-sync-reload']);
 });
 
-/**
- * Default task
- */
-gulp.task('default', ['browser-sync', 'watch', 'copy']);
+// //////////////
+// Default Task
+// //////////////
+gulp.task('default',['scripts','watch','browser-sync']);
