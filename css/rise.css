@@ -10569,6 +10569,15 @@ a[data-wysihtml5-command=underline].active {
   transition: all 0.8s;
   opacity: 1; }
 
+.isfade.ng-hide-add, .isfade.ng-hide-remove {
+  /* this is required as of 1.3x to properly
+     apply all styling in a show/hide animation */
+  transition: 0s linear all; }
+
+.isfade.ng-hide-add-active,
+.isfade.ng-hide-remove-active {
+  /* the transition is defined in the active class */ }
+
 .financial-selector__container {
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
