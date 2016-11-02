@@ -10574,9 +10574,16 @@ a[data-wysihtml5-command=underline].active {
      apply all styling in a show/hide animation */
   transition: 0s linear all; }
 
-.isfade.ng-hide-add-active,
 .isfade.ng-hide-remove-active {
-  /* the transition is defined in the active class */ }
+  /* the transition is defined in the active class */
+  transition: 0.5s linear all;
+  -webkit-transition: 0.5s linear all; }
+
+.isfade.ng-hide-remove {
+  opacity: 0; }
+
+.isfade.ng-hide-remove.ng-hide-remove-active {
+  opacity: 1; }
 
 .financial-selector__container {
   -webkit-transition: all 0.8s;
