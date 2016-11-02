@@ -36,31 +36,37 @@
 
   <div class="container">
 
-    <div class="row" ng-hide="addDisplay">
+    <div class="row">
       <div class="col-sm-10">
         <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-home icon-left"></i> Displays</a></li>
+          <li><a href="main.html"><i class="fa fa-home icon-left"></i> Displays</a></li>
+          <li class="active">Lobby Display</li>
+          <li class="active">Financial Lists</li>
+
         </ol>
       </div><!--col-->
       <div class="col-sm-2">
-        <a ng-click="addDisplay = !addDisplay" href="#" class="btn btn-primary btn-lg btn-block">Add Display</a>
+        <a href="#" class="btn btn-primary btn-lg btn-block">Manage Users</a>
       </div>
     </div><!--row-->
     
-    <div ng-hide="addDisplay">
+
     <form>
       <div class="input-group add-bottom">
         <span class="input-group-addon"><i class="fa fa-search"></i></span>
-        <input class="form-control" type="text" placeholder="Search by Name, ID or Company" name="">
+        <input class="form-control" type="text" placeholder="Search Financial Lists" name="">
       </div>
     </form>
+ 
+
+
     <div class="panel panel-default">
       <table class="table">
         <thead class="table-header">
           <tr class="table-header__row">
             <th class="table-header__cell">Name</th>
-            <th class="table-header__cell">ID</th>
-            <th class="table-header__cell">Company</th>
+            <th class="table-header__cell"></th>
+            <th class="table-header__cell"></th>
             <th class="table-header__cell"></th>
           </tr>
         </thead>
@@ -68,48 +74,27 @@
 
           <tr class="table-body__row">
             <td class="table-body__cell">
-              <a href="display.html"><strong>Lobby Display</strong></a>
+              <a href="#"><strong>List</strong></a>
             </td>
-            <td class="table-body__cell">123ABC123</td>
-            <td class="table-body__cell">Globex Corporation</td>
+            <td class="table-body__cell"></td>
+            <td class="table-body__cell"></td>
             <td class="table-body__cell"></td>
           </tr>
 
           <tr class="table-body__row">
             <td class="table-body__cell">
-              <a href="display.html"><strong>Office Display</strong></a>
+              <a href="#"><strong>List</strong></a>
             </td>
-            <td class="table-body__cell">456DEF456</td>
-            <td class="table-body__cell">Initech</td>
+            <td class="table-body__cell"></td>
+            <td class="table-body__cell"></td>
             <td class="table-body__cell"></td>
           </tr>
 
         </tbody>
       </table>
-    </div>
-  </div>
+    </div><!--panel-->
 
-  <div ng-if="addDisplay">
-  <div class="row">
-    <div class="col-sm-4 col-sm-offset-4">
-      <div class="panel panel-default">
-        <div class="panel-body">
-          <h3 class="half-top add-bottom">Add Display</h3>
-          <form>
-            <div class="form-group">
-              <label class="control-label">Enter Display ID</label>
-              <input class="form-control" type="text" name="">
-            </div>
-            <div class="form-group text-right">
-              <button class="btn btn-primary">Apply</button>
-              <button class="btn btn-default">Cancel</button>
-            </div>
-          </form>
-        </div>
-      </div><!--panel-->
-    </div>
-  </div>
-  </div>
+    
 
 
   </div><!--container-->

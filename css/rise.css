@@ -10541,22 +10541,19 @@ a[data-wysihtml5-command=underline].active {
   border: 1px solid #CCC;
   line-height: 0px; }
 
-.financial-selector h1 {
-  font-size: 48px;
-  margin-bottom: 0;
-  font-weight: 600; }
-
-.financial-selector h3 {
-  margin-top: 8px;
-  font-weight: 400;
-  color: #555; }
-
 .financial-selector .hero {
   text-align: center;
   padding-top: 20px;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   height: 400px; }
+  .financial-selector .hero h1 {
+    font-size: 48px;
+    margin-bottom: 0;
+    font-weight: 600; }
+  .financial-selector .hero h3 {
+    font-weight: 400;
+    color: #555; }
 
 .financial-selector.financial-selector--login {
   overflow: hidden;
