@@ -10559,21 +10559,26 @@ a[data-wysihtml5-command=underline].active {
   overflow: hidden;
   height: calc(100vh-50px); }
 
+.is-hidden, .financial-selector__container .panel-email-login {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 0; }
+
+.is-visible, .financial-selector__container.email-login-animation .panel-email-login {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  opacity: 1; }
+
 .financial-selector__container {
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   position: relative; }
   .financial-selector__container .panel-email-login {
-    -webkit-transition: all 0.8s;
-    transition: all 0.8s;
-    opacity: 0;
     height: 400px; }
   .financial-selector__container.email-login-animation {
     -webkit-transform: translate(0, -400px); }
     .financial-selector__container.email-login-animation .hero {
       opacity: 0; }
-    .financial-selector__container.email-login-animation .panel-email-login {
-      opacity: 1; }
 
 .panel-email-login legend {
   padding: 20px; }
