@@ -30,7 +30,7 @@ gulp.task('browser-sync-reload', function() {
 // //////////////
 
 gulp.task('scripts', function(){
-	gulp.src('bower_components/rv-common-style/dist/css/*.css')
+	gulp.src('bower_components/rv-common-style/dist/**/*')
 	.pipe(gulp.dest('css'));
   gulp.src('bower_components/angular/angular.min.js')
   .pipe(gulp.dest('js'));
