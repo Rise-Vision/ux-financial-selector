@@ -10559,7 +10559,7 @@ a[data-wysihtml5-command=underline].active {
 .financial-selector.financial-selector--login {
   overflow: hidden;
   height: calc(100vh-70px);
-  background-color: #999;
+  background-color: #CCC;
   background-blend-mode: multiply;
   background-size: 100%;
   background-position: bottom;
