@@ -10548,16 +10548,25 @@ a[data-wysihtml5-command=underline].active {
   transition: all 0.2s;
   height: 400px; }
   .financial-selector .hero h1 {
+    color: #FFF;
     font-size: 48px;
     margin-bottom: 0;
     font-weight: 600; }
   .financial-selector .hero h3 {
     font-weight: 400;
-    color: #555; }
+    color: #CCC; }
 
 .financial-selector.financial-selector--login {
   overflow: hidden;
-  height: calc(100vh-50px); }
+  height: calc(100vh-70px);
+  background-color: #999;
+  background-blend-mode: multiply;
+  background-size: 100%;
+  background-position: bottom;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .financial-selector.financial-selector--login.is-email-login {
+    background-color: #FFF; }
 
 .is-hidden, .financial-selector__container .panel-email-login {
   -webkit-transition: all 0.8s;

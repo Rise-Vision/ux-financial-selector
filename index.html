@@ -7,13 +7,15 @@
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/angular-animate.min.js"></script>
 </head>
-<body ng-app=""
-	ng-class="{ 
-		'financial-selector financial-selector--login': !emailLogin,
-		'financial-selector financial-selector--login is-email-login': emailLogin
-	}"
->
+<body ng-app="" ng-class="{ 
+    'financial-selector financial-selector--login': !emailLogin,
+    'financial-selector financial-selector--login is-email-login': emailLogin
+  }"
+  style="
+    background-image: linear-gradient(to right, #444 0%, white 100%), url('image/stock.jpg');
+  " >
 
+<div>
 	<nav class="navbar navbar-default">
   	<div class="container">
     	<div class="navbar-header">
@@ -45,7 +47,6 @@
 				<h1>Financial Selector</h1>	
 				<h3>Lorem Ipsum Dolor Sit Amet Consectetur Tempor Incididunt</h3>
 				<br>
-				<a class="add-top" href="#">What Is The Financial Selector?</a>
 
 				<div class="row add-top add-bottom">
 					<div class="col-sm-4 col-sm-offset-4">
@@ -108,5 +109,6 @@
 			</div>
 		</div><!--financial-selector__container-->
 	</div><!--container-->
+</div><!--financial-selector-->
 </body>
 </html>
