@@ -10559,15 +10559,15 @@ a[data-wysihtml5-command=underline].active {
 .financial-selector.financial-selector--login {
   overflow: hidden;
   height: calc(100vh-70px);
-  background-color: #CCC;
-  background-blend-mode: multiply;
+  background-color: #666;
+  background-image: url("https://s3.amazonaws.com/Rise-Images/financial-selector/stock.jpg");
   background-size: 100%;
-  background-image: linear-gradient(to right, #666 0%, white 100%), url("https://s3.amazonaws.com/Rise-Images/financial-selector/stock.jpg");
+  background-blend-mode: multiply;
   background-position: bottom;
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
   .financial-selector.financial-selector--login.is-email-login {
-    background-color: #FFF; }
+    background-color: #bcbcbc; }
 
 .is-hidden, .financial-selector__container .panel-email-login {
   -webkit-transition: all 0.8s;
