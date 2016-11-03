@@ -10562,6 +10562,7 @@ a[data-wysihtml5-command=underline].active {
   background-color: #CCC;
   background-blend-mode: multiply;
   background-size: 100%;
+  background-image: linear-gradient(to right, #666 0%, white 100%), url("https://s3.amazonaws.com/Rise-Images/financial-selector/stock.jpg");
   background-position: bottom;
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
