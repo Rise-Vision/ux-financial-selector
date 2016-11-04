@@ -34,6 +34,8 @@ gulp.task('scripts', function(){
 	.pipe(gulp.dest('css'));
   gulp.src('bower_components/angular/angular.min.js')
   .pipe(gulp.dest('js'));
+  gulp.src('bower_components/angular-route/angular-route.min.js')
+  .pipe(gulp.dest('js'));
   gulp.src('bower_components/angular-animate/angular-animate.min.js')
   .pipe(gulp.dest('js'));
 });

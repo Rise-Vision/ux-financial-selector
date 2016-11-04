@@ -22,5 +22,8 @@
   },
   "resolutions": {
     "rv-common-style": "feature/financial-selector"
+  },
+  "devDependencies": {
+    "angular-route": "~1.5.8"
   }
 }
