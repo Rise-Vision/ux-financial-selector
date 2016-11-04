@@ -7257,17 +7257,22 @@ pre {
 .navbar {
   position: relative;
   z-index: 9999;
-  padding: 8px 0;
+  padding: 4px 0;
   border-radius: 0;
-  border: none; }
+  border: none;
+  min-height: 0;
+  margin-bottom: 10px; }
+  .navbar.navbar-default {
+    box-shadow: 0px 4px 10px 0 rgba(22, 22, 22, 0.08);
+    border: none; }
+  .navbar .navbar-brand {
+    width: 100px;
+    padding: 6px;
+    height: auto; }
 
-.navbar-default {
-  box-shadow: 0px 4px 10px 0 rgba(22, 22, 22, 0.08);
-  border: none; }
-
-.navbar-brand {
-  width: 100px;
-  padding: 6px; }
+@media (min-width: 1200px) {
+  .navbar {
+    padding: 8px 0; } }
 
 .nav-tabs {
   border-bottom: 1px solid #ddd; }
@@ -7453,10 +7458,13 @@ pre {
     width: 300px; } }
 
 .breadcrumb {
-  background: #FFF;
   font-size: 16px;
-  padding: 10px 0;
-  background: none; }
+  padding: 0;
+  margin-bottom: 10px; }
+
+@media (min-width: 992px) {
+  .breadcrumb {
+    padding: 10px 0; } }
 
 /* Core
    ========================================================================== */
@@ -10551,12 +10559,13 @@ a[data-wysihtml5-command=underline].active {
   height: 400px; }
   .financial-selector .hero h1 {
     color: #FFF;
-    font-size: 48px;
+    font-size: 24px;
     margin-bottom: 0;
     font-weight: 600; }
   .financial-selector .hero h3 {
     font-weight: 400;
-    color: #CCC; }
+    color: #CCC;
+    font-size: 18px; }
 
 .financial-selector.financial-selector--login {
   overflow: hidden;
@@ -10582,22 +10591,6 @@ a[data-wysihtml5-command=underline].active {
   transition: all 0.8s;
   opacity: 1; }
 
-.isfade.ng-hide-add, .isfade.ng-hide-remove {
-  /* this is required as of 1.3x to properly
-     apply all styling in a show/hide animation */
-  transition: 0s linear all; }
-
-.isfade.ng-hide-remove-active {
-  /* the transition is defined in the active class */
-  transition: 0.5s linear all;
-  -webkit-transition: 0.5s linear all; }
-
-.isfade.ng-hide-remove {
-  opacity: 0; }
-
-.isfade.ng-hide-remove.ng-hide-remove-active {
-  opacity: 1; }
-
 .financial-selector__container {
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
@@ -10610,17 +10603,13 @@ a[data-wysihtml5-command=underline].active {
       opacity: 0; }
 
 .panel-email-login legend {
-  padding: 20px; }
+  padding: 10px; }
 
-.login-options {
-  margin-top: 30px; }
-
-.navbar-logo {
-  float: left;
-  margin-top: 6px;
-  margin-right: 8px;
-  display: inline-block;
-  width: 100px; }
+@media (min-width: 1200px) {
+  .financial-selector .hero h1 {
+    font-size: 48px; }
+  .financial-selector .hero h3 {
+    font-size: 24px; } }
 
 /* OLD STYLE */
 .tag-manager .label {
