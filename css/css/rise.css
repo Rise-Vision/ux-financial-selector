@@ -7270,6 +7270,10 @@ pre {
     padding: 6px;
     height: auto; }
 
+@media (min-width: 992px) {
+  .navbar {
+    margin-bottom: 20px; } }
+
 @media (min-width: 1200px) {
   .navbar {
     padding: 8px 0; } }
