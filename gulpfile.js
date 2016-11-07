@@ -38,6 +38,8 @@ gulp.task('scripts', function(){
   .pipe(gulp.dest('js'));
   gulp.src('bower_components/angular-animate/angular-animate.min.js')
   .pipe(gulp.dest('js'));
+  gulp.src('bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js')
+  .pipe(gulp.dest('js'));
 });
 
 // //////////////

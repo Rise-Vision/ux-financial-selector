@@ -1,0 +1,49 @@
+<div class="container">
+
+	<div class="row">
+      <div class="col-sm-9 col-md-9 col-lg-10">
+        <ol class="breadcrumb">
+          <li><a ui-sref="displays"><i class="fa fa-home icon-left"></i> Displays</a></li>
+          <li class="active">Lobby Display</li>
+
+        </ol>
+      </div><!--col-->
+      <div class="col-sm-3 col-md-3 col-lg-2">
+        <a ui-sref="displayUsers" class="btn btn-primary btn-lg btn-block">Manage Users <i class="fa fa-users icon-right"></i></a>
+      </div>
+    </div><!--row-->
+
+	<form>
+    <div class="input-group half-top add-bottom">
+      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+      <input class="form-control" type="text" placeholder="Search Financial Lists" name="">
+    </div>  
+  </form>
+  
+  <div class="panel panel-default">
+      <table class="table">
+        <thead class="table-header">
+          <tr class="table-header__row">
+            <th class="table-header__cell"><a href="#">Name <i class="fa fa-long-arrow-up icon-right"></i></a></th>
+            <th class="table-header__cell hidden-xs"><a href="#">Last Modified</a></th>
+            <th class="table-header__cell hidden-xs"><a href="#">Modified By</a></th>
+          </tr>
+        </thead>
+        <tbody class="table-body">
+
+        <tr class="table-body__row" ng-repeat="lists in $ctrl.lists">
+          <td class="table-body__cell">
+            <a ui-sref="financialListInstruments"><i class="fa fa-list icon-left"></i><strong>{{lists.name}}</strong></a>
+          </td>
+          <td class="table-body__cell hidden-xs">{{lists.lastModified}}</td>
+          <td class="table-body__cell hidden-xs">{{lists.modifiedBy}}</td>
+        </tr>
+
+
+        </tbody>
+      </table>
+    </div><!--panel-->
+
+    <ui-view></ui-view>
+
+</div><!--container-->

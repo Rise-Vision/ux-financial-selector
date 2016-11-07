@@ -1,0 +1,26 @@
+[
+  {
+    "id": "123ABC345",
+    "name": "Lobby Display",
+    "company": "Globex Corporation",
+    "financialLists": {"id":2,"name":"Student Managed Fund"}
+  },
+  {
+    "id": "234FET235",
+    "name": "Office Display",
+    "company": "Intech Corporation",
+    "financialLists": {"id":2,"name":"Student Managed Fund"}
+  },
+  {
+    "id": "234FET235",
+    "name": "Test Display",
+    "company": "Intech Corporation",
+    "financialLists": [{"id":2,"name":"List One"},{"id":3,"name":"List Two"}]
+  },
+  {
+    "id": "234FET235",
+    "name": "Office Downtown Display",
+    "company": "Intech Corporation",
+    "financialLists": {"id":2,"name":"Student Managed Fund"}
+  }
+]

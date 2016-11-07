@@ -1,0 +1,32 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john.doe@gmail.com",
+    "role": "Administrator",
+    "status": "Accepted"
+  },
+  {
+    "name": "John Doe",
+    "email": "john.doe@gmail.com",
+    "role": "Editor",
+    "status": "Accepted"
+  },
+  {
+    "name": "John Doe",
+    "email": "john.doe@gmail.com",
+    "role": "Editor",
+    "status": "Accepted"
+  },
+  {
+    "name": "John Doe",
+    "email": "john.doe@gmail.com",
+    "role": "Editor",
+    "status": "Accepted"
+  },
+  {
+    "name": "John Doe",
+    "email": "john.doe@gmail.com",
+    "role": "Editor",
+    "status": "Accepted"
+  }
+]
