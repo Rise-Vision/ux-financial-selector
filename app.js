@@ -62,17 +62,17 @@ financialApp.controller('ModalCtrl', function ($uibModal, $log, $document) {
 
   $ctrl.animationsEnabled = true;
 
-  $ctrl.open = function (size, parentSelector) {
+  $ctrl.open = function (template,parentSelector) {
     var parentElem = parentSelector ? 
       angular.element($document[0].querySelector('' + parentSelector)) : undefined;
     var modalInstance = $uibModal.open({
       animation: $ctrl.animationsEnabled,
       ariaLabelledBy: 'modal-title',
       ariaDescribedBy: 'modal-body',
-      templateUrl: 'myModalContent.html',
+      templateUrl: template,
       controller: 'ModalInstanceCtrl',
       controllerAs: '$ctrl',
-      size: size,
+      size: 'medium',
       appendTo: parentElem
     });
 

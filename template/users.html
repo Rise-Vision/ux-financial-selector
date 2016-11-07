@@ -10,8 +10,8 @@
         </ol>
       </div><!--col-->
 
-      <div class="col-sm-3 col-md-3 col-lg-2">
-        <a ui-sref="displayUsers" class="btn btn-primary btn-lg btn-block">Add User <i class="fa fa-plus icon-right"></i></a>
+      <div class="col-sm-3 col-md-3 col-lg-2" ng-controller="ModalCtrl as $ctrl">
+        <a ng-click="$ctrl.open('inviteUser.html')" class="btn btn-primary btn-lg btn-block">Add User <i class="fa fa-plus icon-right"></i></a>
       </div>
     </div><!--row-->
 
@@ -52,7 +52,7 @@
                 Actions <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" ng-controller="ModalCtrl as $ctrl">
-                <li role="menuitem"><a href="#/users" ng-click="$ctrl.open()">Edit User</a></li>
+                <li role="menuitem"><a href="#/users" ng-click="$ctrl.open('editUser.html')">Edit User</a></li>
                 <li role="menuitem"><a href="#">Delete User</a></li>
               </ul>
             </div><!-- Single button -->
@@ -66,43 +66,88 @@
     </div><!--panel-->
 
 <div ng-controller="ModalCtrl">
+  <script type="text/ng-template" id="editUser.html">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">Edit User</h3>
+    </div>
+    
+    <div class="modal-body" id="modal-body">
 
-    <script type="text/ng-template" id="myModalContent.html">
-        <div class="modal-header">
-            <h3 class="modal-title" id="modal-title">Edit User</h3>
+      <form class="form">
+        <div class="form-group">
+          <label class="control-label">Name</label>
+          <input type="text" class="form-control" value="John Doe" name="">
         </div>
-        <div class="modal-body" id="modal-body">
-          <form class="form">
+        <div class="form-group">
+          <label class="control-label">Email</label>
+          <input type="text" class="form-control" value="john@globex.com" name="">
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
             <div class="form-group">
-              <label class="control-label">Name</label>
-              <input type="text" class="form-control" value="John Doe" name="">
+              <label class="control-label">Role</label>
+                <select class="form-control">
+                  <option>Administrator</option>
+                  <option>Editor</option>
+                </select>
+              </div>   
             </div>
-            <div class="form-group">
-              <label class="control-label">Email</label>
-              <input type="text" class="form-control" value="john@globex.com" name="">
-            </div>
+          </div>
+        </form>
 
-            <div class="row">
-              <div class="col-sm-6">
-                <div class="form-group">
-                  <label class="control-label">Role</label>
-                  <select class="form-control">
-                    <option>Administrator</option>
-                    <option>Editor</option>
-                  </select>
-                </div>   
-              </div>
-            </div>
-
-            
-          </form>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
-            <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
-        </div>
-    </script>
+      </div>
+      
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+        <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
+      </div>
    
+  </script>
+</div><!--modal-->
+
+
+<div ng-controller="ModalCtrl">
+  <script type="text/ng-template" id="inviteUser.html">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">Add User</h3>
+    </div>
+    
+    <div class="modal-body" id="modal-body">
+
+      <div style="padding:20px;" ng-if="invitationSent" class="text-center">
+        <p>An invitation email was sent to <strong>joe@globex.com</strong>.</p>
+        <button class="btn btn-default" ng-click="$ctrl.cancel()">OK</button>
+      </div>
+
+      <form class="form" ng-hide="invitationSent">
+
+        <div class="form-group">
+          <label class="control-label">Email</label>
+          <input type="text" class="form-control" placeholder="Enter Email" name="">
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label class="control-label">Role</label>
+                <select class="form-control">
+                  <option>Administrator</option>
+                  <option>Editor</option>
+                </select>
+              </div>   
+            </div>
+          </div>
+        </form>
+
+      </div>
+      
+      <div class="modal-footer" ng-hide="invitationSent">
+        <button class="btn btn-primary" type="button" ng-click="invitationSent = !invitationSent">Send Invitation <i class="fa fa-check icon-right"></i></button>
+        <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
+      </div>
+   
+  </script>
 </div><!--modal-->
 
 
