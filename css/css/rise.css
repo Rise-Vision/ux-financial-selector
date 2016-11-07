@@ -7262,19 +7262,28 @@ pre {
   border: none;
   min-height: 0;
   margin-bottom: 10px; }
+  .navbar .navbar-header {
+    display: inline-block; }
+  .navbar .navbar-nav.navbar-left {
+    float: left; }
+  .navbar .navbar-nav.navbar-right {
+    float: right;
+    display: inline-block; }
   .navbar.navbar-default {
     box-shadow: 0px 4px 10px 0 rgba(22, 22, 22, 0.08);
     border: none; }
     .navbar.navbar-default .navbar-nav > li > a:hover, .navbar.navbar-default .navbar-nav > li > a:focus {
       color: #4d4d4d; }
   .navbar .navbar-brand {
-    width: 100px;
-    padding: 6px;
+    width: 110px;
+    padding: 10px 10px 0 10px;
     height: auto; }
 
 @media (min-width: 992px) {
   .navbar {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+    .navbar .navbar-brand {
+      padding-top: 8px; } }
 
 @media (min-width: 1200px) {
   .navbar {
