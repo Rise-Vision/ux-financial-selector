@@ -41,7 +41,10 @@
           </td>
           <td class="table-body__cell hidden-xs">{{users.email}}</td>
           <td class="table-body__cell hidden-xs">{{users.role}}</td>
-          <td class="table-body__cell hidden-xs">{{users.status}}</td>
+          <td class="table-body__cell hidden-xs">
+          <span ng-if="users.status == 'Accepted'">{{users.status}}</span>
+          <a href="#" ng-if="users.status == 'Re-Invite'">{{users.status}}</a>
+          </td>
           <td class="table-body__cell">
             
             <div class="btn-group" uib-dropdown is-open="status.isopen">

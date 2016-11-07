@@ -15,7 +15,7 @@
     "name": "John Doe",
     "email": "john.doe@gmail.com",
     "role": "Editor",
-    "status": "Accepted"
+    "status": "Re-Invite"
   },
   {
     "name": "John Doe",
@@ -27,6 +27,6 @@
     "name": "John Doe",
     "email": "john.doe@gmail.com",
     "role": "Editor",
-    "status": "Accepted"
+    "status": "Re-Invite"
   }
 ]
