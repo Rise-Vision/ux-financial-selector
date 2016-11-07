@@ -41,9 +41,9 @@
           </td>
           <td class="table-body__cell hidden-xs">{{users.email}}</td>
           <td class="table-body__cell hidden-xs">{{users.role}}</td>
-          <td class="table-body__cell hidden-xs">
+          <td ng-controller="ModalCtrl as $ctrl" class="table-body__cell hidden-xs">
           <span ng-if="users.status == 'Accepted'">{{users.status}}</span>
-          <a href="#" ng-if="users.status == 'Re-Invite'">{{users.status}}</a>
+          <a href="#/users" ng-click="$ctrl.open('reInvite.html')" ng-if="users.status == 'Re-Invite'">{{users.status}}</a>
           </td>
           <td class="table-body__cell">
             
@@ -104,13 +104,11 @@
       </div>
    
   </script>
-</div><!--modal-->
 
-
-<div ng-controller="ModalCtrl">
-  <script type="text/ng-template" id="inviteUser.html">
+    <script type="text/ng-template" id="inviteUser.html">
     <div class="modal-header">
-      <h3 class="modal-title" id="modal-title">Add User</h3>
+      <h3 ng-hide="invitationSent" class="modal-title" id="modal-title">Add User</h3>
+      <h3 ng-show="invitationSent" class="modal-title" id="modal-title">Your Invitation Was Sent</h3>
     </div>
     
     <div class="modal-body" id="modal-body">
@@ -148,7 +146,32 @@
       </div>
    
   </script>
+
+
+  <script type="text/ng-template" id="reInvite.html">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">Your Invitation Was Sent</h3>
+    </div>
+    
+    <div class="modal-body" id="modal-body">
+
+      <div style="padding:20px;" class="text-center">
+        <p>An invitation email was sent to <strong>joe@globex.com</strong>.</p>
+        <button class="btn btn-default" ng-click="$ctrl.cancel()">OK</button>
+      </div>
+
+    </div>
+      
+      
+   
+  </script>
+
+
 </div><!--modal-->
+
+
+
+
 
 
 
