@@ -10647,9 +10647,13 @@ a[data-wysihtml5-command=underline].active {
 .drag-handle {
   background-image: url("https://s3.amazonaws.com/Rise-Images/UI/dot-pattern.png");
   width: 12px;
-  height: 20px;
+  height: 36px;
   float: left;
   margin-right: 10px; }
+
+@media (min-width: 992px) {
+  .drag-handle {
+    height: 20px; } }
 
 /* OLD STYLE */
 .tag-manager .label {

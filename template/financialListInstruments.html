@@ -15,11 +15,10 @@
     </div><!--row-->
 
 
-    <div class="alert alert-danger half-top" role="alert">
-    In order to show Currencies you must subscribe to <a href="#">Currencies</a>.</div>
+    
 
 	<form>
-      <div class="input-group add-bottom">
+      <div class="input-group half-top add-bottom">
         <span class="input-group-addon"><i class="fa fa-search"></i></span>
         <input class="form-control" type="text" placeholder="Search Instruments" name="">
       </div>
@@ -44,9 +43,10 @@
             <td class="table-body__cell" >
               <div class="drag-handle"></div>
               <strong>{{instruments.name}}</strong>
+              <p class="text-muted remove-bottom visible-xs">{{instruments.category}}</p>
             </td>
-            <td class="table-body__cell hidden-xs">
-            <div class="label label-default">{{instruments.symbol}}</div></td>
+            <td style="font-size: 15.5px; font-weight: 400" class="table-body__cell hidden-xs">
+            {{instruments.symbol}}</td>
             <td class="table-body__cell hidden-xs">{{instruments.category}}</td>
             <td class="table-body__cell hidden-xs">{{instruments.logo}}</td>
             <td class="table-body__cell text-right">
@@ -70,10 +70,16 @@
       </table>
     </div>
 
+    <div style="padding: 8px" class="alert alert-danger half-top" role="alert">
+    In order to show <strong>Currencies</strong> you must subscribe to <strong>Currencies</strong>. <a style="font-weight: 500" class="btn btn-sm btn-default hidden-xs" href="#">Get Currencies in the Store <i class="fa fa-shopping-cart icon-right"></i></a>
+
+    <a style="font-weight: 500" class="btn btn-sm btn-default btn-block visible-xs" href="#">Get Currencies in the Store <i class="fa fa-shopping-cart icon-right"></i></a>
+    </div>
+
     <div class="text-right">
-        <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
-        <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
-      </div>
+      <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+      <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
+    </div>
 
 
 
