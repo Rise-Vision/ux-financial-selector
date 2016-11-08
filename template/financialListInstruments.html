@@ -14,6 +14,10 @@
       </div>
     </div><!--row-->
 
+
+    <div class="alert alert-danger" role="alert">
+    In order to show Currencies you must subscribe to <a href="#">Currencies</a>.</div>
+
 	<form>
       <div class="input-group half-top add-bottom">
         <span class="input-group-addon"><i class="fa fa-search"></i></span>
@@ -21,8 +25,7 @@
       </div>
     </form>
 
-    <div class="alert alert-danger" role="alert">
-    In order to show Currencies you must subscribe to <a href="#">Currencies</a>.</div>
+    
   
 	<div class="panel panel-default">
       <table class="table table--sortable">
@@ -66,6 +69,11 @@
         </tbody>
       </table>
     </div>
+
+    <div class="text-right">
+        <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+        <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
+      </div>
 
 
 
