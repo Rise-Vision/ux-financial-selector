@@ -7473,13 +7473,26 @@ pre {
     width: 300px; } }
 
 .breadcrumb {
-  font-size: 16px;
+  font-size: 12px;
   padding: 0;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap; }
+  .breadcrumb > li {
+    vertical-align: top; }
+    .breadcrumb > li a, .breadcrumb > li span {
+      max-width: 100px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      display: inline-block;
+      vertical-align: top; }
 
 @media (min-width: 992px) {
   .breadcrumb {
-    padding: 10px 0; } }
+    padding: 10px 0;
+    font-size: 16px; }
+    .breadcrumb > li a, .breadcrumb > li span {
+      max-width: 240px; } }
 
 /* Core
    ========================================================================== */
