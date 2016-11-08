@@ -40,7 +40,7 @@
         </thead>
         <tbody class="table-body">
 
-          <tr class="table-body__row" ng-repeat="instruments in $ctrl.instruments">
+          <tr class="table-body__row {{instruments.category}}" ng-repeat="instruments in $ctrl.instruments">
             <td class="table-body__cell" >
               <div class="drag-handle"></div>
               <strong>{{instruments.name}}</strong>
@@ -123,3 +123,12 @@
   </script>
 
   </div>
+
+  <style type="text/css">
+    .Currency td {
+      color: #c7254e;
+    }
+    .Currency .label {
+      color: #c7254e;
+    } 
+  </style>
