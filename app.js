@@ -5,7 +5,6 @@ financialApp.config(function($stateProvider) {
   var states = [
     { name: 'login', url: '', component: 'login' },
     { name: 'about', url: '/about', component: 'about' },
-    { name: 'financialListInstruments', url: '/instruments', component: 'financialListInstruments' },
     
     { 
       name: 'displays', 
@@ -38,6 +37,17 @@ financialApp.config(function($stateProvider) {
           return usersService.getAllUsers();
         }
       }
+    },
+
+    { 
+      name: 'financialListInstruments', 
+      url: '/instruments', 
+      component: 'financialListInstruments',
+      resolve: {
+        instruments: function(instrumentsService) {
+          return instrumentsService.getAllInstruments();
+        }
+      }
     }
     
     
@@ -54,6 +64,7 @@ financialApp.run(function($http, $uiRouter) {
   $http.get('data/displays.json', { cache: true });
   $http.get('data/list.json', { cache: true });
   $http.get('data/users.json', { cache: true });
+  $http.get('data/instruments.json', { cache: true });
 });
 
 

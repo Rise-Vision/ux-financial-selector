@@ -20,6 +20,9 @@
         <input class="form-control" type="text" placeholder="Search Instruments" name="">
       </div>
     </form>
+
+    <div class="alert alert-danger" role="alert">
+    In order to show Currencies you must subscribe to <a href="#">Currencies</a>.</div>
   
 	<div class="panel panel-default">
       <table class="table table--sortable">
@@ -29,38 +32,67 @@
             <th class="table-header__cell hidden-xs"><a href="#">Symbol</a></th>
             <th class="table-header__cell hidden-xs"><a href="#">Category</a></th>
             <th class="table-header__cell hidden-xs"><a href="#">Logo</a></th>
-            <th class="table-header__cell hidden-xs"></th>
+            <th class="table-header__cell hidden-xs col-xs-1"></th>
           </tr>
         </thead>
         <tbody class="table-body">
 
-          <tr class="table-body__row">
-            <td class="table-body__cell">
-              <div class="drag-handle">
-              </div> <strong>Dow Jones</strong>
+          <tr class="table-body__row" ng-repeat="instruments in $ctrl.instruments">
+            <td class="table-body__cell" >
+              <div class="drag-handle"></div>
+              <strong>{{instruments.name}}</strong>
             </td>
-            <td class="table-body__cell hidden-xs"><div class="label label-default">.DJI</div></td>
-            <td class="table-body__cell hidden-xs">Indexes</td>
-            <td class="table-body__cell hidden-xs">Available</td>
             <td class="table-body__cell hidden-xs">
+            <div class="label label-default">{{instruments.symbol}}</div></td>
+            <td class="table-body__cell hidden-xs">{{instruments.category}}</td>
+            <td class="table-body__cell hidden-xs">{{instruments.logo}}</td>
+            <td class="table-body__cell">
               <div class="btn-group" uib-dropdown is-open="status.isopen">
                 <button id="single-button" type="button" class="btn btn-xs btn-default" uib-dropdown-toggle ng-disabled="disabled">
                   Actions <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" ng-controller="ModalCtrl as $ctrl">
 
-                  <li role="menuitem"><a href="#/instruments">Edit Name</a></li>
+                  <li role="menuitem"><a ng-click="$ctrl.open('editName.html')" href="#/instruments">Edit Name</a></li>
                   <li role="menuitem"><a href="#/instruments">Remove Instrument</a></li>
 
                 </ul>
               </div><!-- Single button -->
+
+              
             </td>
           </tr>
-
           
         </tbody>
       </table>
     </div>
 
 
+
 </div><!--container-->
+
+
+<div ng-controller="ModalCtrl">
+  <script type="text/ng-template" id="editName.html">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">Edit Instrument Name</h3>
+    </div>
+    
+    <div class="modal-body" id="modal-body">
+
+      <form class="form">
+        <div class="form-group">
+          <label class="control-label">Instrument Name</label>
+          <input type="text" class="form-control" value="Dow Jones" name="">
+        </div>
+      </form>
+
+      </div>
+      
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+        <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
+      </div>
+   
+  </script>
+  </div>

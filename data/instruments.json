@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Dow Jones",
+    "symbol": ".DJI",
+    "category": "Indexes",
+    "logo": "Available"
+  },
+  {
+    "name": "Nasdaq Net Gainers",
+    "symbol": ".NG.O",
+    "category": "Market Statistics",
+    "logo": "Available"
+  },
+  {
+    "name": "Yen",
+    "symbol": "JPY",
+    "category": "Currency",
+    "logo": "Available"
+  },
+  {
+    "name": "1 Yr T-Note",
+    "symbol": "US1YT=XX",
+    "category": "Bond",
+    "logo": "Available"
+  },
+  {
+    "name": "Google",
+    "symbol": "GOOG.O",
+    "category": "Stock",
+    "logo": "Available"
+  }
+]
