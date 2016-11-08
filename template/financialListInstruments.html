@@ -9,8 +9,8 @@
 
         </ol>
       </div><!--col-->
-      <div class="col-sm-3 col-md-3 col-lg-2">
-        <a href="#" class="btn btn-primary btn-lg btn-block">Add Instrument <i class="fa fa-plus icon-right"></i></a>
+      <div class="col-sm-3 col-md-3 col-lg-2" ng-controller="ModalCtrl as $ctrl">
+        <a ng-click="$ctrl.open('addInstrument.html')" href="#/instruments" class="btn btn-primary btn-lg btn-block">Add Instrument <i class="fa fa-plus icon-right"></i></a>
       </div>
     </div><!--row-->
 
@@ -95,4 +95,23 @@
       </div>
    
   </script>
+
+  <script type="text/ng-template" id="addInstrument.html">
+    <div class="modal-header">
+      <h3 class="modal-title" id="modal-title">Add Instrument</h3>
+    </div>
+    
+    <div class="modal-body" id="modal-body">
+
+      Add
+
+      </div>
+      
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+        <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
+      </div>
+   
+  </script>
+
   </div>
