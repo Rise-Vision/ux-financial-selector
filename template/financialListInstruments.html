@@ -36,7 +36,8 @@
 
           <tr class="table-body__row">
             <td class="table-body__cell">
-              <i class="fa fa-sort icon-left"></i> <strong>Dow Jones</strong>
+              <div class="drag-handle">
+              </div> <strong>Dow Jones</strong>
             </td>
             <td class="table-body__cell hidden-xs"><div class="label label-default">.DJI</div></td>
             <td class="table-body__cell hidden-xs">Indexes</td>
@@ -48,8 +49,8 @@
                 </button>
                 <ul class="dropdown-menu" ng-controller="ModalCtrl as $ctrl">
 
-                  <li role="menuitem"><a href="#/users">Edit Name</a></li>
-                  <li role="menuitem"><a href="#">Remove Instrument</a></li>
+                  <li role="menuitem"><a href="#/instruments">Edit Name</a></li>
+                  <li role="menuitem"><a href="#/instruments">Remove Instrument</a></li>
 
                 </ul>
               </div><!-- Single button -->

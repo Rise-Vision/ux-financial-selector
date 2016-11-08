@@ -10644,6 +10644,13 @@ a[data-wysihtml5-command=underline].active {
   .financial-selector .hero h3 {
     font-size: 24px; } }
 
+.drag-handle {
+  background-image: url("https://s3.amazonaws.com/Rise-Images/UI/dot-pattern.png");
+  width: 12px;
+  height: 20px;
+  float: left;
+  margin-right: 10px; }
+
 /* OLD STYLE */
 .tag-manager .label {
   display: inline-block;
