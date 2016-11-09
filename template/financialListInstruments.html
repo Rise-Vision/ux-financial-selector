@@ -1,5 +1,21 @@
+
+<div ng-hide="addInstrument" class="bottom-save-block animated fadeInUp">
+  <div class="container text-right">
+    <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+    <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
+  </div>
+</div>
+
+<div ng-show="addInstrument" class="bottom-save-block animated fadeInUp">
+  <div class="container text-right">
+    <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Add <i class="fa fa-check icon-right"></i></button>
+    <button class="btn btn-default" type="button" ng-click="addInstrument = !addInstrument">Cancel <i class="fa fa-times icon-right"></i></button>
+  </div>
+</div>
+
 <div class="container">
 
+    
 
 	<div class="row">
       <div class="col-sm-9 col-md-9 col-lg-10">
@@ -79,9 +95,8 @@
 
 
   <div ng-hide="addInstrument" style="padding: 2px 10px" class="alert alert-danger half-top" role="alert">
-    Not subscribed to <strong>Currencies</strong>. <a style="font-weight: 500" class="btn btn-sm btn-default hidden-xs" href="#">Subscribe <i class="fa fa-shopping-cart icon-right"></i></a>
+    Not subscribed to <strong>Currencies</strong>. <a style="font-weight: 500" href="#">Subscribe </a>
 
-    <a style="font-weight: 500" class="btn btn-sm btn-default btn-block visible-xs" href="#">Subscribe <i class="fa fa-shopping-cart icon-right"></i></a>
     </div>
 
   <form ng-hide="addInstrument">
@@ -137,11 +152,7 @@
 
     
 
-    <div class="text-right">
-      <button ng-hide="addInstrument" class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
-      <button ng-show="addInstrument" class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Add <i class="fa fa-plus icon-right"></i></button>
-      <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
-    </div>
+    
 
 
 
