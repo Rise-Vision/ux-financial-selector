@@ -1,5 +1,6 @@
 <div class="container">
 
+
 	<div class="row">
       <div class="col-sm-9 col-md-9 col-lg-10">
         <ol class="breadcrumb">
@@ -9,74 +10,135 @@
 
         </ol>
       </div><!--col-->
-      <div class="col-sm-3 col-md-3 col-lg-2" ng-controller="ModalCtrl as $ctrl">
-        <a ng-click="$ctrl.open('addInstrument.html')" href="#/instruments" class="btn btn-primary btn-lg btn-block">Add Instrument <i class="fa fa-plus icon-right"></i></a>
+      <div class="col-sm-3 col-md-3 col-lg-2">
+        <a ng-hide="addInstrument" ng-click="addInstrument = !addInstrument" href="#/instruments" class="btn btn-primary btn-lg btn-block">Add Instrument <i class="fa fa-plus icon-right"></i></a>
       </div>
-    </div><!--row-->  
+    </div><!--row--> 
 
-    <div style="padding: 8px" class="alert alert-danger half-top" role="alert">
+  
+
+	
+
+  <div class="" ng-show="addInstrument">
+    <div class="">
+      
+      <div class="row">
+        <div class="col-sm-8">
+          <form>
+            <div class="input-group add-bottom">
+              <span class="input-group-addon"><i class="fa fa-search"></i></span>
+              <input class="form-control" type="text" placeholder="Search Instruments" name="">
+            </div>
+          </form>
+        </div><!--col-->
+
+        <div class="col-sm-4" ng-controller="ModalCtrl as $ctrl">
+          <div class="form-group">
+            <select class="form-control">
+              <option>Category: Indices</option>
+              <option>Category: Stocks</option>
+              <option>Category: Bonds</option>
+              <option>Category: Currencies</option>
+            </select>
+          </div>
+        </div><!--col-->
+
+      </div><!--row-->
+
+  
+
+
+  <div class="panel panel-default">
+    <table class="table table--selector">
+
+      <thead class="table-header">
+        <tr class="table-header__row">
+          <th class="table-header__cell">Name</th>
+          <th class="table-header__cell hidden-xs">Symbol</th>
+          <th class="table-header__cell hidden-xs">Logo</th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body">
+        <tr ng-click="isSelected = !isSelected" class="table-body__row" ng-repeat="instruments in $ctrl.instruments | filter : {category: 'Indices'} : true"
+        ng-class="{'table-body__row--is-selected' : isSelected}"
+        >
+          <td class="table-body__cell">
+            <strong>{{instruments.name}}</strong>
+          </td>
+          <td style="font-size: 15.5px; font-weight: 400" class="table-body__cell hidden-xs">
+            {{instruments.symbol}}</td>
+          <td class="table-body__cell hidden-xs">
+            <span ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</span>
+            <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}}</a>
+          </td>
+          
+        </tr>  
+      </tbody>
+    </table>
+  </div><!--panel-->
+  </div>
+  </div> <!--addInstruments-->
+
+
+  <div ng-hide="addInstrument" style="padding: 2px 10px" class="alert alert-danger half-top" role="alert">
     Not subscribed to <strong>Currencies</strong>. <a style="font-weight: 500" class="btn btn-sm btn-default hidden-xs" href="#">Subscribe <i class="fa fa-shopping-cart icon-right"></i></a>
 
     <a style="font-weight: 500" class="btn btn-sm btn-default btn-block visible-xs" href="#">Subscribe <i class="fa fa-shopping-cart icon-right"></i></a>
-    </div>  
-
-	<form>
-      <div class="input-group half-top add-bottom">
-        <span class="input-group-addon"><i class="fa fa-search"></i></span>
-        <input class="form-control" type="text" placeholder="Search Instruments" name="">
-      </div>
-    </form>
-  
-	<div class="panel panel-default">
-      <table class="table table--sortable">
-        <thead class="table-header hidden">
-          <tr class="table-header__row">
-            <th class="table-header__cell">Name</th>
-            <th class="table-header__cell hidden-xs">Symbol</th>
-            <th class="table-header__cell hidden-xs">Logo</th>
-            <th class="table-header__cell col-xs-1"></th>
-          </tr>
-        </thead>
-
-        <tbody class="table-body">
-          <tr class="table-body__row {{instruments.category}}" ng-repeat="instruments in $ctrl.instruments">
-
-            <td class="table-body__cell" >
-              <div class="drag-handle"></div>
-              <strong>{{instruments.name}}</strong>
-              <p class="text-muted remove-bottom">{{instruments.category}}</p>
-            </td>
-
-            <td style="font-size: 15.5px; font-weight: 400" class="table-body__cell hidden-xs">
-            {{instruments.symbol}}</td>
-            
-            <td class="table-body__cell hidden-xs">
-              <span ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</span>
-              <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}}</a>
-            </td>
-
-            <td class="table-body__cell text-right">
-              <div class="btn-group" uib-dropdown is-open="status.isopen">
-                <button id="single-button" type="button" class="btn btn-xs btn-default" uib-dropdown-toggle ng-disabled="disabled">
-                  Actions <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" ng-controller="ModalCtrl as $ctrl">
-                  <li role="menuitem"><a ng-click="$ctrl.open('editName.html')" href="#/instruments">Edit Name</a></li>
-                  <li role="menuitem"><a href="#/instruments">Remove Instrument</a></li>
-                </ul>
-              </div><!-- Single button -->             
-            </td>
-
-          </tr>
-          
-        </tbody>
-      </table>
     </div>
+
+  <form ng-hide="addInstrument">
+    <div class="input-group half-top add-bottom">
+      <span class="input-group-addon"><i class="fa fa-search"></i></span>
+      <input class="form-control" type="text" placeholder="Search Instruments" name="">
+    </div>
+  </form>
+  
+	<div ng-hide="addInstrument" class="panel panel-default">
+    <table class="table table--sortable">
+      <thead class="table-header hidden">
+        <tr class="table-header__row">
+          <th class="table-header__cell">Name</th>
+          <th class="table-header__cell hidden-xs">Symbol</th>
+          <th class="table-header__cell hidden-xs">Logo</th>
+          <th class="table-header__cell col-xs-1"></th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body">
+        <tr class="table-body__row {{instruments.category}}" ng-repeat="instruments in $ctrl.instruments">
+          <td class="table-body__cell" >
+            <div class="drag-handle"></div>
+            <strong>{{instruments.name}}</strong>
+            <p class="text-muted remove-bottom">{{instruments.category}}</p>
+          </td>
+          <td style="font-size: 15.5px; font-weight: 400" class="table-body__cell hidden-xs">
+            {{instruments.symbol}}</td>
+          <td class="table-body__cell hidden-xs">
+            <span ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</span>
+            <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}}</a>
+          </td>
+          <td class="table-body__cell text-right">
+            <div class="btn-group" uib-dropdown is-open="status.isopen">
+              <button id="single-button" type="button" class="btn btn-xs btn-default" uib-dropdown-toggle ng-disabled="disabled">
+              Actions <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" ng-controller="ModalCtrl as $ctrl">
+                <li role="menuitem"><a ng-click="$ctrl.open('editName.html')" href="#/instruments">Edit Name</a></li>
+                <li role="menuitem"><a href="#/instruments">Remove Instrument</a></li>
+              </ul>
+            </div><!-- Single button -->             
+          </td>
+        </tr>  
+      </tbody>
+    </table>
+  </div><!--panel-->
 
     
 
     <div class="text-right">
-      <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+      <button ng-hide="addInstrument" class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+      <button ng-show="addInstrument" class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Add <i class="fa fa-plus icon-right"></i></button>
       <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
     </div>
 
@@ -110,20 +172,45 @@
   </script>
 
   <script type="text/ng-template" id="addInstrument.html">
+
     <div class="modal-header">
       <h3 class="modal-title" id="modal-title">Add Instrument</h3>
     </div>
     
     <div class="modal-body" id="modal-body">
 
-      Add
+      <div class="row">
+        
+        <div class="col-sm-8">
+          <form>
+            <div class="input-group add-bottom">
+              <span class="input-group-addon"><i class="fa fa-search"></i></span>
+              <input class="form-control" type="text" placeholder="Search Instruments" name="">
+            </div>
+          </form>
+        </div><!--col-->
 
-      </div>
+        <div class="col-sm-4" ng-controller="ModalCtrl as $ctrl">
+          <div class="form-group">
+            <select class="form-control">
+              <option>Category: Indexes</option>
+            </select>
+          </div>
+        </div><!--col-->
+
+      </div><!--row-->
+
+        <div class="panel panel-default">
+          
+        </div><!--panel-->
+
+
+    </div><!--modal-body-->
       
-      <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
-        <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
-      </div>
+    <div class="modal-footer">
+      <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+      <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
+    </div>
    
   </script>
 

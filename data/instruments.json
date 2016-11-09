@@ -2,7 +2,7 @@
   {
     "name": "Dow Jones",
     "symbol": ".DJI",
-    "category": "Indexes",
+    "category": "Indices",
     "logo": "Logo Available"
   },
   {
@@ -28,5 +28,47 @@
     "symbol": "GOOG.O",
     "category": "Stock",
     "logo": "Get Logo"
+  },
+  {
+    "name": "CBOE Indices Armor Index",
+    "symbol": "ARMOR",
+    "category": "Indices",
+    "logo": "Logo Available"
+  },
+  {
+    "name": "INDICES EUROPEENS iNav",
+    "symbol": "INCC1",
+    "category": "Indices",
+    "logo": "Logo Available"
+  },
+  {
+    "name": "Russell Indices",
+    "symbol": "R1RGSRET",
+    "category": "Indices",
+    "logo": "Logo Available"
+  },
+  {
+    "name": "Stockholm Indices",
+    "symbol": "OMXS30BAL20",
+    "category": "Indices",
+    "logo": "Logo Available"
+  },
+  {
+    "name": "AMEX Indices",
+    "symbol": "HHI",
+    "category": "Indices",
+    "logo": "Logo Available"
+  },
+  {
+    "name": "Shanghai Indices",
+    "symbol": "399310",
+    "category": "Indices",
+    "logo": "Logo Available"
+  },
+  {
+    "name": "Tel-Aviv SE Indices",
+    "symbol": "TELBOND40",
+    "category": "Indices",
+    "logo": "Logo Available"
   }
 ]
