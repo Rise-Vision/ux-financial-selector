@@ -51,23 +51,19 @@
   <div class="panel panel-default">
     <table class="table table--selector">
 
-      <thead class="table-header">
-        <tr class="table-header__row">
-          <th class="table-header__cell">Name</th>
-          <th class="table-header__cell hidden-xs">Symbol</th>
-          <th class="table-header__cell hidden-xs">Logo</th>
-        </tr>
-      </thead>
 
       <tbody class="table-body">
         <tr ng-click="isSelected = !isSelected" class="table-body__row" ng-repeat="instruments in $ctrl.instruments | filter : {category: 'Indices'} : true"
         ng-class="{'table-body__row--is-selected' : isSelected}"
         >
           <td class="table-body__cell">
-            <strong>{{instruments.name}}</strong>
+            <span>
+              <strong style="margin-right: 4px">{{instruments.symbol}}</strong>
+              <p class="text-muted remove-bottom">{{instruments.name}}</p>
+            </span>
+            
           </td>
-          <td style="font-size: 15.5px; font-weight: 400" class="table-body__cell hidden-xs">
-            {{instruments.symbol}}</td>
+         
           <td class="table-body__cell hidden-xs">
             <span ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</span>
             <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}}</a>
@@ -99,7 +95,6 @@
       <thead class="table-header hidden">
         <tr class="table-header__row">
           <th class="table-header__cell">Name</th>
-          <th class="table-header__cell hidden-xs">Symbol</th>
           <th class="table-header__cell hidden-xs">Logo</th>
           <th class="table-header__cell col-xs-1"></th>
         </tr>
@@ -109,11 +104,11 @@
         <tr class="table-body__row {{instruments.category}}" ng-repeat="instruments in $ctrl.instruments">
           <td class="table-body__cell" >
             <div class="drag-handle"></div>
-            <strong>{{instruments.name}}</strong>
-            <p class="text-muted remove-bottom">{{instruments.category}}</p>
+            <p class="text-muted" style="font-weight: 500; margin-bottom: 3px; text-transform: uppercase; font-size: 10px;">{{instruments.category}}</p>
+            <span><strong style="margin-right: 4px">{{instruments.symbol}}</strong></span>
+            <p class="text-muted remove-bottom">{{instruments.name}}</p>
           </td>
-          <td style="font-size: 15.5px; font-weight: 400" class="table-body__cell hidden-xs">
-            {{instruments.symbol}}</td>
+
           <td class="table-body__cell hidden-xs">
             <span ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</span>
             <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}}</a>

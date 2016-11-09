@@ -10647,7 +10647,7 @@ a[data-wysihtml5-command=underline].active {
 .drag-handle {
   background-image: url("https://s3.amazonaws.com/Rise-Images/UI/dot-pattern.png");
   width: 12px;
-  height: 36px;
+  height: 52px;
   float: left;
   margin-right: 10px; }
 
@@ -11484,6 +11484,8 @@ a[data-wysihtml5-command=underline].active {
   .table.table--selector .table-body .table-body__row--is-selected > .table-body__cell, .table--selector.table-2 .table-body .table-body__row--is-selected > .table-body__cell {
     background: #4ab767;
     color: #FFF; }
+    .table.table--selector .table-body .table-body__row--is-selected > .table-body__cell .text-muted, .table--selector.table-2 .table-body .table-body__row--is-selected > .table-body__cell .text-muted {
+      color: #FFF; }
 
 /* Table Selector Icon
    ========================================================================== */
@@ -11495,7 +11497,7 @@ a[data-wysihtml5-command=underline].active {
   display: inline-block;
   margin-right: 4px;
   margin-left: 4px;
-  vertical-align: middle; }
+  vertical-align: top; }
   .selector-icon.selector-icon--selected, .table.table--selector .table-body .table-body__row > .selector-icon--selected.table-body__cell:first-child:before, .table--selector.table-2 .table-body .table-body__row > .selector-icon--selected.table-body__cell:first-child:before, .table.table--selector .table-body .table-body__row--is-selected.table-body__row > .table-body__cell:first-child:before, .table--selector.table-2 .table-body .table-body__row--is-selected.table-body__row > .table-body__cell:first-child:before, .table.table--selector .table-body .table-body__row--is-selected > .selector-icon.table-body__cell:first-child:before, .table--selector.table-2 .table-body .table-body__row--is-selected > .selector-icon.table-body__cell:first-child:before {
     content: '\f14a'; }
 
