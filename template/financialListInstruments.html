@@ -19,9 +19,10 @@
 
 	
 
-  <div class="" ng-show="addInstrument">
+  <div class="animated fadeIn" ng-show="addInstrument">
     <div class="">
-      
+
+
       <div class="row">
         <div class="col-sm-8">
           <form>
@@ -104,14 +105,14 @@
         <tr class="table-body__row {{instruments.category}}" ng-repeat="instruments in $ctrl.instruments">
           <td class="table-body__cell" >
             <div class="drag-handle"></div>
-            <p class="text-muted" style="font-weight: 500; margin-bottom: 3px; text-transform: uppercase; font-size: 10px;">{{instruments.category}}</p>
+            
             <span><strong style="margin-right: 4px">{{instruments.symbol}}</strong></span>
             <p class="text-muted remove-bottom">{{instruments.name}}</p>
           </td>
 
           <td class="table-body__cell hidden-xs">
-            <span ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</span>
-            <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}}</a>
+            <span>{{instruments.category}}</span>
+            
           </td>
           <td class="table-body__cell text-right">
             <div class="btn-group" uib-dropdown is-open="status.isopen">
@@ -119,8 +120,13 @@
               Actions <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" ng-controller="ModalCtrl as $ctrl">
+                <li>
+                  <a href="#" ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</a>
+                  <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}} <i class="fa fa-shopping-cart"></i></a>
+                </li>
+                <li class="divider"></li>
                 <li role="menuitem"><a ng-click="$ctrl.open('editName.html')" href="#/instruments">Edit Name</a></li>
-                <li role="menuitem"><a href="#/instruments">Remove Instrument</a></li>
+                <li role="menuitem"><a href="#/instruments"><span class="text-danger">Remove Instrument</span></a></li>
               </ul>
             </div><!-- Single button -->             
           </td>

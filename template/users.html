@@ -53,7 +53,7 @@
                 <li class="visible-xs" ng-if="users.status == 'Re-Invite'"  role="menuitem"><a ng-click="$ctrl.open('reInvite.html')" href="#">Re-Invite</a></li>
                 <div ng-if="users.status == 'Re-Invite'" class="divider visible-xs"></div>
                 <li ng-if="users.status == 'Accepted'" role="menuitem"><a href="#/users" ng-click="$ctrl.open('editUser.html')">Edit User</a></li>
-                <li ng-if="users.status == 'Accepted'" role="menuitem"><a href="#">Remove User</a></li>
+                <li ng-if="users.status == 'Accepted'" role="menuitem"><a href="#"><span class="text-danger">Remove User<span></a></li>
                 <li ng-if="users.status == 'Re-Invite'" role="menuitem"><a href="#/users">Cancel Invitation</a></li>
               </ul>
             </div><!-- Single button -->
