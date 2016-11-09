@@ -3,30 +3,30 @@
     "name": "Dow Jones",
     "symbol": ".DJI",
     "category": "Indexes",
-    "logo": "Available"
+    "logo": "Logo Available"
   },
   {
     "name": "Nasdaq Net Gainers",
     "symbol": ".NG.O",
     "category": "Market Statistics",
-    "logo": "Available"
+    "logo": "Logo Available"
   },
   {
     "name": "Yen",
     "symbol": "JPY",
     "category": "Currency",
-    "logo": "Available"
+    "logo": "Logo Available"
   },
   {
     "name": "1 Yr T-Note",
     "symbol": "US1YT=XX",
     "category": "Bond",
-    "logo": "Available"
+    "logo": "Logo Available"
   },
   {
     "name": "Google",
     "symbol": "GOOG.O",
     "category": "Stock",
-    "logo": "Available"
+    "logo": "Get Logo"
   }
 ]

@@ -10651,10 +10651,6 @@ a[data-wysihtml5-command=underline].active {
   float: left;
   margin-right: 10px; }
 
-@media (min-width: 992px) {
-  .drag-handle {
-    height: 20px; } }
-
 /* OLD STYLE */
 .tag-manager .label {
   display: inline-block;
