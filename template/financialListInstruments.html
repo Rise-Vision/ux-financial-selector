@@ -75,14 +75,13 @@
         >
           <td class="table-body__cell">
             <span>
-              <strong style="margin-right: 4px">{{instruments.symbol}}</strong>
-              <p class="text-muted remove-bottom">{{instruments.name}}</p>
+              <strong style="margin-right: 4px">{{instruments.name}}</strong>
+              <p class="text-muted remove-bottom">{{instruments.symbol}}</p>
             </span>
             
           </td>
          
           <td class="table-body__cell hidden-xs">
-            <span ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</span>
             <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}}</a>
           </td>
           
@@ -121,8 +120,9 @@
           <td class="table-body__cell" >
             <div class="drag-handle"></div>
             
-            <span><strong style="margin-right: 4px">{{instruments.symbol}}</strong></span>
-            <p class="text-muted remove-bottom">{{instruments.name}}</p>
+            <span><strong style="margin-right: 4px">{{instruments.name}}</strong></span>
+            <p class="text-muted remove-bottom hidden-xs">{{instruments.symbol}}</p>
+            <p class="text-muted remove-bottom visible-xs">{{instruments.symbol}}<span style="margin-left: 4px">&middot; {{instruments.category}}</span></p>
           </td>
 
           <td class="table-body__cell hidden-xs">
