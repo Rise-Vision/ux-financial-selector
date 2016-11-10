@@ -7501,7 +7501,8 @@ pre {
    ========================================================================== */
 html {
   height: 100%;
-  -ms-overflow-style: scrollbar; }
+  -ms-overflow-style: scrollbar;
+  margin-left: calc(100vw - 100%); }
 
 body {
   min-height: 100%;
