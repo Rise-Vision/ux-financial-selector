@@ -6980,10 +6980,14 @@ button.close {
     color: #020621; }
 
 .btn, .icon-nav label {
-  outline: 0; }
+  outline: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  border: none; }
 
 .btn-lg, .btn-group-lg > .btn, .icon-nav .btn-group-lg > label {
-  font-size: 16px; }
+  font-size: 16px;
+  font-weight: 400; }
 
 .btn-hg,
 .btn-group-hg > .btn, .icon-nav
@@ -6995,7 +6999,8 @@ button.close {
 .btn-default, .timeline .dropdown-menu li .btn, .timeline .dropdown-menu li .icon-nav label, .icon-nav .timeline .dropdown-menu li label {
   color: #333;
   background-color: #e8e8e8;
-  border-color: #CCC; }
+  border-color: #CCC;
+  box-shadow: inset 0 -2px 0 #e8e8e8; }
   .btn-default:hover, .timeline .dropdown-menu li .btn:hover, .timeline .dropdown-menu li .icon-nav label:hover, .icon-nav .timeline .dropdown-menu li label:hover, .btn-default:focus, .timeline .dropdown-menu li .btn:focus, .timeline .dropdown-menu li .icon-nav label:focus, .icon-nav .timeline .dropdown-menu li label:focus, .btn-default:active, .timeline .dropdown-menu li .btn:active, .timeline .dropdown-menu li .icon-nav label:active, .icon-nav .timeline .dropdown-menu li label:active, .btn-default.active, .timeline .dropdown-menu li .active.btn, .timeline .dropdown-menu li .icon-nav label.active, .icon-nav .timeline .dropdown-menu li label.active,
   .open > .btn-default.dropdown-toggle, .timeline .dropdown-menu li
   .open > .dropdown-toggle.btn, .timeline .dropdown-menu li .icon-nav
@@ -7068,7 +7073,8 @@ button.close {
 .btn-primary {
   color: #fff;
   background-color: #4ab767;
-  border-color: #4ab767; }
+  border-color: #4ab767;
+  box-shadow: inset 0 -2px 0 #3b9352; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active,
   .open > .btn-primary.dropdown-toggle {
     color: #fff;
@@ -7477,7 +7483,8 @@ pre {
   padding: 0;
   margin-bottom: 10px;
   overflow: hidden;
-  white-space: nowrap; }
+  white-space: nowrap;
+  background: none; }
   .breadcrumb > li {
     vertical-align: top; }
     .breadcrumb > li a, .breadcrumb > li span {
@@ -8159,8 +8166,8 @@ path {
   animation-delay: 1s; }
 
 .animated, #helpDropdownButton.add-notice {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both; }
 
@@ -10579,46 +10586,6 @@ a[data-wysihtml5-command=underline].active {
   font-size: 32px;
   border: 1px solid #CCC;
   line-height: 0px; }
-
-/**
- * http://applemusic.tumblr.com/
- * https://jsfiddle.net/xq56dmrh/
- */
-/** Ultra Light */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 100;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff"); }
-
-/** Thin */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 200;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-thin-webfont.woff"); }
-
-/** Regular */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff"); }
-
-/** Medium */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 500;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-medium-webfont.woff"); }
-
-/** Semi Bold */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 600;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff"); }
-
-/** Bold */
-@font-face {
-  font-family: "San Francisco";
-  font-weight: 700;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff"); }
 
 .financial-selector .hero {
   text-align: center;
