@@ -69,7 +69,7 @@
 <div ng-controller="ModalCtrl">
   <script type="text/ng-template" id="editUser.html">
     <div class="modal-header">
-      <h3 class="modal-title" id="modal-title">Edit User</h3>
+      <h4 class="modal-title" id="modal-title">Edit User</h4>
     </div>
     
     <div class="modal-body" id="modal-body">
@@ -108,15 +108,16 @@
 
     <script type="text/ng-template" id="inviteUser.html">
     <div class="modal-header">
-      <h3 ng-hide="invitationSent" class="modal-title" id="modal-title">Add User</h3>
-      <h3 ng-show="invitationSent" class="modal-title" id="modal-title">Your Invitation Was Sent</h3>
+      <h4 ng-hide="invitationSent" class="modal-title" id="modal-title">Add User</h4>
+      <h4 ng-show="invitationSent" class="modal-title" id="modal-title">Success</h4>
     </div>
     
     <div class="modal-body" id="modal-body">
 
       <div style="padding:20px;" ng-if="invitationSent" class="text-center">
-        <p>An invitation email was sent to <strong>joe@globex.com</strong>.</p>
-        <button class="btn btn-default" ng-click="$ctrl.cancel()">OK</button>
+        <i class="ss-check text-green" style="font-size: 32px;"></i>
+        <p class="half-top">An invitation email was sent to <strong>joe@globex.com</strong>.</p>
+        <button class="btn btn-primary add-top" ng-click="$ctrl.cancel()">OK</button>
       </div>
 
       <form class="form" ng-hide="invitationSent">
@@ -151,7 +152,7 @@
 
   <script type="text/ng-template" id="reInvite.html">
     <div class="modal-header">
-      <h3 class="modal-title" id="modal-title">Your Invitation Was Sent</h3>
+      <h4 class="modal-title" id="modal-title">Success</h4>
     </div>
     
     <div class="modal-body" id="modal-body">
