@@ -116,10 +116,12 @@ financialApp.controller('ModalInstanceCtrl', function ($uibModalInstance) {
 financialApp.controller('OptionsController',function ($scope){
       
       $scope.users = [
-      {name:'Bonds', id:1},
-      {name:'Currencies', id:3},
-      {name:'Indices', id:5},
-      {name:'Stocks', id:7},
+      {name:'Stocks', id:1},
+      {name:'Market Statistics', id:3},
+      {name:'World Indexes', id:5},
+      {name:'Bonds', id:7},
+      {name:'Commodities', id:6},
+      {name:'Currencies', id:8}
       ]
       
       $scope.selectedUser = 5;

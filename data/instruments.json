@@ -2,7 +2,7 @@
   {
     "name": "Dow Jones",
     "symbol": ".DJI",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
@@ -14,79 +14,79 @@
   {
     "name": "Yen",
     "symbol": "JPY",
-    "category": "Currency",
+    "category": "Currencies",
     "logo": "Logo Available"
   },
   {
     "name": "1 Yr T-Note",
     "symbol": "US1YT=XX",
-    "category": "Bond",
+    "category": "Bonds",
     "logo": "Logo Available"
   },
   {
     "name": "Google",
     "symbol": "GOOG.O",
-    "category": "Stock",
+    "category": "Stocks",
     "logo": "Get Logo"
   },
   {
     "name": "CBOE Armor",
     "symbol": "ARMOR",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
     "name": "INDICES EUROPEENS",
     "symbol": "INCC1",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
     "name": "Russell Indices",
     "symbol": "R1RGSRET",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
     "name": "Stockholm Indices",
     "symbol": "OMXS30BAL20",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
     "name": "AMEX Indices",
     "symbol": "HHI",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
     "name": "Shanghai Indices",
     "symbol": "399310",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
     "name": "Tel-Aviv SE",
     "symbol": "TELBOND40",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
     "name": "Tel-Aviv SE",
     "symbol": "TELBOND40",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
     "name": "Tel-Aviv SE",
     "symbol": "TELBOND40",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   },
   {
     "name": "Tel-Aviv SE",
     "symbol": "TELBOND40",
-    "category": "Indices",
+    "category": "World Indexes",
     "logo": "Logo Available"
   }
 ]

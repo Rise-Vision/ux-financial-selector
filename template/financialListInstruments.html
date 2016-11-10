@@ -2,19 +2,19 @@
 <div ng-controller="OptionsController">
 <div ng-hide="addInstrument" class="bottom-save-block animated fadeInUp">
   <div class="container text-right">
-    <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+    <button class="btn btn-primary" ui-sref="displayFinancialList" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
     <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
   </div>
 </div>
 
 <div ng-show="addInstrument" class="bottom-save-block animated fadeInUp">
   <div class="container text-right">
-    <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Add <i class="fa fa-check icon-right"></i></button>
+    <button class="btn btn-primary" ng-click="addInstrument = !addInstrument" type="button" ng-click="$ctrl.ok()">Add <i class="fa fa-check icon-right"></i></button>
     <button class="btn btn-default" type="button" ng-click="addInstrument = !addInstrument">Cancel <i class="fa fa-times icon-right"></i></button>
   </div>
 </div>
 
-<div class="container">
+<div class="container animated fadeIn">
  
 
 	<div class="row">
@@ -38,13 +38,7 @@
   <div class="animated fadeIn" ng-show="addInstrument">
     <div class="">
 
-    <div ng-show="selectedUser==3">
-    <div style="padding: 2px 10px" class="alert alert-danger half-top" role="alert">
-      Not subscribed to <strong>Currencies</strong>. <a style="font-weight: 500" href="#">Subscribe </a>
-    </div>
-  </div>
-
-
+  
       <div class="row">
         <div class="col-sm-8">
           <form>
@@ -57,21 +51,25 @@
 
         <div class="col-sm-4">
           <div class="form-group">
-            <select class="form-control"  ng-options="opt.id as opt.name for opt in users" ng-model="selectedUser"></select>        
+            <select ng-class="{'animated shake' : selectedUser==8}" class="form-control"  ng-options="opt.id as opt.name for opt in users" ng-model="selectedUser"></select>        
 
           </div>
         </div><!--col-->
 
       </div><!--row-->
 
-  
+    <div class="animated fadeIn" ng-show="selectedUser==8">
+      <div style="padding: 2px 10px" class="alert alert-danger" role="alert">
+      Not subscribed to <strong>Currencies</strong>. <a style="font-weight: 500" href="#">Subscribe </a>
+      </div>
+    </div>
 
   <div class="panel panel-default">
-    <table class="table" ng-class="{'table--selector' : selectedUser==5}">
+    <table class="table" ng-class="{'table--selector' : selectedUser==5,'light-table' : selectedUser==8}">
 
 
       <tbody class="table-body">
-        <tr ng-click="isSelected = !isSelected" class="table-body__row" ng-repeat="instruments in $ctrl.instruments | filter : {category: 'Indices'} : true"
+        <tr ng-click="isSelected = !isSelected" class="table-body__row" ng-repeat="instruments in $ctrl.instruments | filter : {category: 'World Indexes'} : true"
         ng-class="{'table-body__row--is-selected' : isSelected}"
         >
           <td class="table-body__cell">
@@ -82,7 +80,8 @@
             
           </td>
          
-          <td class="table-body__cell hidden-xs">
+          <td class="table-body__cell hidden-xs col-xs-2">
+            <span ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</span>
             <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}}</a>
           </td>
           
@@ -234,6 +233,11 @@
     .Currency .label {
       color: #c7254e;
     } 
+    .light-table {
+      opacity: 0.5;
+    }
+    .red-border {
+    }
   </style>
 
 
