@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container" ng-controller="OptionsController">
 
     
 
@@ -38,6 +38,12 @@
   <div class="animated fadeIn" ng-show="addInstrument">
     <div class="">
 
+    <div ng-show="selectedUser==3">
+    <div style="padding: 2px 10px" class="alert alert-danger half-top" role="alert">
+      Not subscribed to <strong>Currencies</strong>. <a style="font-weight: 500" href="#">Subscribe </a>
+    </div>
+  </div>
+
 
       <div class="row">
         <div class="col-sm-8">
@@ -49,14 +55,10 @@
           </form>
         </div><!--col-->
 
-        <div class="col-sm-4" ng-controller="ModalCtrl as $ctrl">
+        <div class="col-sm-4">
           <div class="form-group">
-            <select class="form-control">
-              <option>Category: Indices</option>
-              <option>Category: Stocks</option>
-              <option>Category: Bonds</option>
-              <option>Category: Currencies</option>
-            </select>
+            <select class="form-control"  ng-options="opt.id as opt.name for opt in users" ng-model="selectedUser"></select>        
+
           </div>
         </div><!--col-->
 
@@ -64,9 +66,8 @@
 
   
 
-
   <div class="panel panel-default">
-    <table class="table table--selector">
+    <table class="table" ng-class="{'table--selector' : selectedUser==5}">
 
 
       <tbody class="table-body">
@@ -136,7 +137,7 @@
               </button>
               <ul class="dropdown-menu" ng-controller="ModalCtrl as $ctrl">
                 <li>
-                  <a href="#" ng-if="instruments.logo == 'Logo Available'">{{instruments.logo}}</a>
+      
                   <a href="#" ng-if="instruments.logo == 'Get Logo'">{{instruments.logo}} <i class="fa fa-shopping-cart"></i></a>
                 </li>
                 <li class="divider"></li>
@@ -203,11 +204,9 @@
         </div><!--col-->
 
         <div class="col-sm-4" ng-controller="ModalCtrl as $ctrl">
-          <div class="form-group">
-            <select class="form-control">
-              <option>Category: Indexes</option>
-            </select>
-          </div>
+
+          
+
         </div><!--col-->
 
       </div><!--row-->
@@ -236,3 +235,5 @@
       color: #c7254e;
     } 
   </style>
+
+

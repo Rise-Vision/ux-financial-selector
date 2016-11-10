@@ -1,5 +1,7 @@
 var financialApp = angular.module('financialApp', ['ui.router','ui.bootstrap']);
 
+
+
 financialApp.config(function($stateProvider) {
   // An array of state definitions
   var states = [
@@ -57,6 +59,10 @@ financialApp.config(function($stateProvider) {
   states.forEach(function(state) {
     $stateProvider.state(state);
   });
+
+
+
+
   
 });
 
@@ -66,6 +72,9 @@ financialApp.run(function($http, $uiRouter) {
   $http.get('data/users.json', { cache: true });
   $http.get('data/instruments.json', { cache: true });
 });
+
+
+
 
 
 financialApp.controller('ModalCtrl', function ($uibModal, $log, $document) {
@@ -102,5 +111,18 @@ financialApp.controller('ModalInstanceCtrl', function ($uibModalInstance) {
   $ctrl.cancel = function () {
     $uibModalInstance.dismiss('cancel');
   };
+});
+
+financialApp.controller('OptionsController',function ($scope){
+      
+      $scope.users = [
+      {name:'Bonds', id:1},
+      {name:'Currencies', id:3},
+      {name:'Indices', id:5},
+      {name:'Stocks', id:7},
+      ]
+      
+      $scope.selectedUser = 5;
+      
 });
 
