@@ -7291,16 +7291,13 @@ pre {
     .navbar.navbar-default .navbar-nav > .open > a {
       background: #FFF; }
   .navbar .navbar-brand {
-    width: 90px;
-    padding: 10px 10px 0 10px;
+    width: 110px;
+    padding: 8px 8px 0 10px;
     height: auto; }
 
 .navbar {
   /* Small Devices, Tablets */
   /* Medium Devices, Desktops */ }
-  @media only screen and (min-width: 768px) {
-    .navbar .navbar-brand {
-      width: 110px; } }
   @media (min-width: 992px) {
     .navbar {
       padding: 4px 0;
