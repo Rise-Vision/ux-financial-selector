@@ -40,11 +40,27 @@
 
         
         <ul class="nav navbar-nav navbar-right">
-          <li class="add-right"><button class="btn btn-primary navbar-btn"><span class="hidden-xs">Need Help</span> <i class="fa fa-question" style="line-height: 20px"></i></button></li>
 
-          <li uib-dropdown is-open="status.isopen">
+          <li uib-dropdown>
             
-            <a href="#" style="padding: 5px;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle>
+            <button class="dropdown-toggle btn btn-primary navbar-btn add-right" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle>
+             <span class="hidden-xs">Need Help</span> <i class="fa fa-question" style="line-height: 20px"></i>
+            </button>
+            
+            <ul class="dropdown-menu">
+              <li><a href="#">Ask the Community</a></li>
+              <li><a href="#">Priority Support <span class="text-success">Faster</span></a></li>
+              <li><a href="#">Send Us a Note</a></li>
+              <li><a href="#">Free Webinars</a></li>
+              <li><a href="#">User Documentation</a></li>
+              <li><a href="#">Rise Training</a></li>
+            </ul>
+
+          </li>
+
+          <li uib-dropdown>
+            
+            <a style="padding:4px;" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle>
               <div style="text-align: right; line-height: 18px; display: inline-block;">
                 <p class="remove-bottom u_ellipsis u_ellipsis-md"><strong>John Doe</strong></p>
                 <p class="text-muted remove-bottom u_ellipsis u_ellipsis-md">johndoe@globex.com</p>
@@ -54,6 +70,7 @@
             
             <ul class="dropdown-menu">
               <li ng-controller="ModalCtrl as $ctrl"><a href="#" ng-click="$ctrl.open('template/editUser.html')">User Settings</a></li>
+              <li class="divider"></li>
               <li><a href="#">Log Out</a></li>
             </ul>
 
@@ -73,6 +90,11 @@
     vertical-align: bottom;
   }
 </style>
+
+
+
+
+    
 
 
       <ui-view></ui-view>
