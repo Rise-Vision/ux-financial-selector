@@ -7288,8 +7288,10 @@ pre {
     .navbar.navbar-default .navbar-nav > li {
       display: inline-block;
       vertical-align: top; }
-    .navbar.navbar-default .navbar-nav > li > a:hover, .navbar.navbar-default .navbar-nav > li > a:focus {
-      color: #4d4d4d; }
+    .navbar.navbar-default .navbar-nav > li > a {
+      border-radius: 4px; }
+      .navbar.navbar-default .navbar-nav > li > a:hover, .navbar.navbar-default .navbar-nav > li > a:focus {
+        color: #4d4d4d; }
     .navbar.navbar-default .navbar-nav > .open > a {
       background: #FFF; }
   .navbar .navbar-brand {
