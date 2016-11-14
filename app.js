@@ -1,7 +1,6 @@
 var financialApp = angular.module('financialApp', ['ui.router','ui.bootstrap']);
 
 
-
 financialApp.config(function($stateProvider) {
   // An array of state definitions
   var states = [
@@ -60,11 +59,9 @@ financialApp.config(function($stateProvider) {
     $stateProvider.state(state);
   });
 
-
-
-
   
 });
+
 
 financialApp.run(function($http, $uiRouter) {
   $http.get('data/displays.json', { cache: true });
@@ -72,9 +69,6 @@ financialApp.run(function($http, $uiRouter) {
   $http.get('data/users.json', { cache: true });
   $http.get('data/instruments.json', { cache: true });
 });
-
-
-
 
 
 financialApp.controller('ModalCtrl', function ($uibModal, $log, $document) {

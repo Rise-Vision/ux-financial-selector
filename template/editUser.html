@@ -1,0 +1,38 @@
+<div ng-controller="ModalCtrl">
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-title">User Settings</h4>
+      </div>
+    
+      <div class="modal-body" id="modal-body">
+
+        <form class="form">
+          <div class="form-group">
+            <label class="control-label">Name</label>
+            <input type="text" class="form-control" value="John Doe" name="">
+          </div>
+          <div class="form-group">
+            <label class="control-label">Email</label>
+            <input type="text" class="form-control" value="johndoe@globex.com" name="">
+          </div>
+          <h4>Change Password</h4>
+          <div class="panel panel-default">
+          <div class="panel-body">
+            <div class="form-group">
+              <label class="control-label">Old Password</label>
+              <input type="text" class="form-control" value="" name="">
+            </div>
+            <div class="form-group">
+              <label class="control-label">New Password</label>
+              <input type="text" class="form-control" value="" name="">
+            </div>
+          </div>
+          </div>
+        </form>
+
+      </div>
+      
+      <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="$ctrl.ok()">Save <i class="fa fa-check icon-right"></i></button>
+        <button class="btn btn-default" type="button" ng-click="$ctrl.cancel()">Cancel <i class="fa fa-times icon-right"></i></button>
+      </div>
+  </div>
