@@ -43,7 +43,7 @@
 
           <li uib-dropdown>
             
-            <button class="dropdown-toggle btn btn-primary navbar-btn add-right" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle>
+            <button class="dropdown-toggle btn btn-primary navbar-btn add-right" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle>
              <span class="hidden-xs">Need Help</span> <i class="fa fa-question" style="line-height: 20px"></i>
             </button>
             
@@ -62,13 +62,13 @@
 
           <li uib-dropdown>
             
-            <a style="padding:4px;" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle>
+            <div style="padding:4px;" class="dropdown-toggle clickable" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" uib-dropdown-toggle>
               <div style="text-align: right; line-height: 18px; display: inline-block;">
-                <p class="remove-bottom u_ellipsis u_ellipsis-md"><strong>John Doe</strong></p>
+                <p class="remove-bottom u_ellipsis u_ellipsis-md">John Doe</p>
                 <p class="text-muted remove-bottom u_ellipsis u_ellipsis-md">johndoe@globex.com</p>
               </div>
               <div style="vertical-align: top; margin-left: 10px; margin-top:14px; display: inline-block;" class="caret"></div>
-            </a>
+            </div>
             
             <ul class="dropdown-menu">
               <li ng-controller="ModalCtrl as $ctrl"><a href="#" ng-click="$ctrl.open('template/editUser.html')">User Settings</a></li>
