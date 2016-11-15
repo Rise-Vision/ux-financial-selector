@@ -8,30 +8,26 @@
 	      <li class="active"><span><i class="ss-home icon-left"></i> Displays</span></li>
 	    </ol>
 	  </div><!--col-->
-	  <div class="col-sm-3">
+	  <div class="col-sm-3 hidden-xs">
 	    <button ng-hide="addDisplay" ng-click="addDisplay = !addDisplay" class="btn btn-primary btn-lg btn-block">Add Display <i class="fa fa-plus icon-right"></i></button>
 	  </div>
 	</div><!--row-->
 
-  <div class="animated fadeIn" ng-show="addDisplay">
-    <h3 style="font-weight: 400">Add a Display</h3>
-
-    <form class="add-top">
-      <div class="form-group">
-        <label class="control-label">Display ID</label>
-        <input class="form-control" type="text" placeholder="Enter Display ID" name="">
-      </div>
-    </form>
-
-    <div class="text-right">
-    <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Add <i class="fa fa-check icon-right"></i></button>
-    <button class="btn btn-default" type="button" ng-click="addDisplay = !addDisplay">Cancel <i class="fa fa-times icon-right"></i></button>
+  <div class="row half-top visible-xs">
+    <div class="col-xs-7">
+      <form ng-hide="addDisplay">
+        <div class="input-group add-bottom">
+          <span class="input-group-addon"><i class="fa fa-search"></i></span>
+          <input class="form-control" type="text" placeholder="Search Displays" name="">
+        </div>
+      </form>
     </div>
+    <div class="col-xs-5">
+      <button ng-hide="addDisplay" ng-click="addDisplay = !addDisplay" class="btn btn-primary btn-block"><span style="font-size: 13px; line-height: 20px">Add Display </span></button>
+    </div>
+  </div><!--visible-xs-->
 
-
-  </div>
-
-	<form ng-hide="addDisplay">
+	<form class="hidden-xs" ng-hide="addDisplay">
      <div class="input-group half-top add-bottom">
       <span class="input-group-addon"><i class="fa fa-search"></i></span>
       <input class="form-control" type="text" placeholder="Search Displays" name="">
@@ -76,5 +72,23 @@
 
     </table>
   </div>
+
+  <div class="animated fadeIn" ng-show="addDisplay">
+    <h3 style="font-weight: 400">Add a Display</h3>
+
+    <form class="add-top">
+      <div class="form-group">
+        <label class="control-label">Display ID</label>
+        <input class="form-control" type="text" placeholder="Enter Display ID" name="">
+      </div>
+    </form>
+
+    <div class="text-right">
+    <button class="btn btn-primary disabled" type="button" ng-click="$ctrl.ok()">Add <i class="fa fa-check icon-right"></i></button>
+    <button class="btn btn-default" type="button" ng-click="addDisplay = !addDisplay">Cancel <i class="fa fa-times icon-right"></i></button>
+    </div>
+
+
+  </div><!--fadeIn-->
 	
 </div><!--container-->

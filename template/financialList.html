@@ -8,17 +8,33 @@
 
         </ol>
       </div><!--col-->
-      <div class="col-sm-3 col-md-3 col-lg-2">
-        <a ui-sref="displayUsers" class="btn btn-primary btn-lg btn-block">Manage Users <i class="fa fa-users icon-right"></i></a>
-      </div>
-    </div><!--row-->
+    <div class="col-sm-3 col-md-3 col-lg-2 hidden-xs">
+      <a ui-sref="displayUsers" class="btn btn-primary btn-lg btn-block">Manage Users <i class="fa fa-users icon-right"></i></a>
+    </div>
+  </div><!--row-->
 
-	<form>
+  <form class="hidden-xs">
     <div class="input-group half-top add-bottom">
       <span class="input-group-addon"><i class="fa fa-search"></i></span>
       <input class="form-control" type="text" placeholder="Search Financial Lists" name="">
     </div>  
   </form>
+
+  <div class="row half-top visible-xs">
+    <div class="col-xs-7">
+      <form>
+        <div class="input-group add-bottom">
+          <span class="input-group-addon"><i class="fa fa-search"></i></span>
+          <input class="form-control" type="text" placeholder="Search Financial Lists" name="">
+        </div>
+      </form>
+    </div>
+    <div class="col-xs-5">
+      <button ui-sref="displayUsers" class="btn btn-primary btn-block"><span style="font-size: 13px; line-height: 20px">Manage Users</span></button>
+    </div>
+  </div><!--visible-xs-->
+
+	
   
   <div class="panel panel-default">
       <table class="table">
